@@ -1,3 +1,4 @@
 import weightEq from './weightEq'
 import targetBodyParts from './targetBodyParts'
-export const schemaTypes = [weightEq, targetBodyParts]
+import cardio from './cardio'
+export const schemaTypes = [weightEq, targetBodyParts, cardio]

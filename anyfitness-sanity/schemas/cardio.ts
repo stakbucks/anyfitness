@@ -1,0 +1,50 @@
+export default {
+  title: '유산소',
+  name: 'cardio',
+  type: 'document',
+  fields: [
+    {
+      title: '제품이름',
+      name: 'name',
+      type: 'string',
+    },
+    {
+      title: '분류',
+      name: 'Category',
+      type: 'string',
+    },
+    {
+      title: '이미지',
+      name: 'image',
+      type: 'image',
+    },
+    {
+      title: '상세이미지',
+      name: 'detailImgs',
+      type: 'image',
+    },
+    {
+      title: '스펙',
+      name: 'specification',
+      type: 'object',
+      fields: [
+        {name: 'sizeArr', type: 'array', of: [{type: 'string'}], title: '규격'},
+        {name: 'motor', type: 'string', title: '모터'},
+        {name: 'maxWieght', type: 'string', title: '최대하중'},
+        {name: 'displayInfo', type: 'string', title: '디스플레이정보'},
+        {name: 'incline', type: 'string', title: '경사도'},
+        {name: 'runningArea', type: 'string', title: '주행면적'},
+        {name: 'program', type: 'string', title: '프로그램'},
+        {name: 'dualButtonHandle', type: 'string', title: '손잡이 듀얼버튼'},
+        {name: 'size', type: 'string', title: '규격'},
+        {name: 'weight', type: 'string', title: '중량'},
+        {name: 'driveSystem', type: 'string', title: '구동방식'},
+        {name: 'intensityLevels', type: 'string', title: '운동강도'},
+        {name: 'cardioSystem', type: 'string', title: '심박시스템'},
+        {name: 'powerSupply', type: 'string', title: '전원공급'},
+        {name: 'maxWeightOfMan', type: 'string', title: '허용몸무게'},
+        {name: 'features', type: 'array', of: [{type: 'string'}], title: '재품특징'},
+      ],
+    },
+  ],
+}
