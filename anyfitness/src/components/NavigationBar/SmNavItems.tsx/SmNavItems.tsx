@@ -4,6 +4,7 @@ import HamburgerIcon from '@/UI/Icons/HamburgerIcon';
 import { useState } from 'react';
 import SideBar from './SideBar/SideBar';
 import ModalPortal from '@/components/ModalPortal/ModalPortal';
+import { AnimatePresence } from 'framer-motion';
 
 export default function SmNavItems() {
   const [isSideBarOpen, setIsSideBarOpen] = useState(false);
@@ -14,14 +15,16 @@ export default function SmNavItems() {
       <button className="lg:hidden">
         <HamburgerIcon onClick={handleClick} />
       </button>
-      {isSideBarOpen && (
-        <ModalPortal>
-          <SideBar
-            isSideBarOpen={isSideBarOpen}
-            setIsSideBarOpen={setIsSideBarOpen}
-          />
-        </ModalPortal>
-      )}
+      <AnimatePresence>
+        {isSideBarOpen && (
+          <ModalPortal>
+            <SideBar
+              isSideBarOpen={isSideBarOpen}
+              setIsSideBarOpen={setIsSideBarOpen}
+            />
+          </ModalPortal>
+        )}
+      </AnimatePresence>
     </>
   );
 }
