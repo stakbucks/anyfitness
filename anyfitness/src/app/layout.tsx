@@ -26,6 +26,7 @@ export default function RootLayout({
       <body className={pretendard.className}>
         <NavigationBar />
         {children}
+        <div id="portal" />
       </body>
     </html>
   );

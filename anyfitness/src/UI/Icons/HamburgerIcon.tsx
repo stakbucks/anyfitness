@@ -1,4 +1,8 @@
-export default function HamburgerIcon() {
+type Props = {
+  onClick(): void;
+};
+
+export default function HamburgerIcon({ onClick }: Props) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -6,6 +10,7 @@ export default function HamburgerIcon() {
       height="24"
       viewBox="0 0 24 24"
       fill="none"
+      onClick={onClick}
     >
       <path
         d="M2 6H22"

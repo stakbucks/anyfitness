@@ -17,8 +17,8 @@ const config: Config = {
     screens: {
       md: '390px', // 768-390
       lg: '768px', // 1024-768
-      sp: '1520px', // 랜딩페이지용 특수 브레이크 포인트
       xl: '1024px', // 1960-1024
+      sp: '1520px', // 랜딩페이지용 특수 브레이크 포인트
       // => @media (min-width: 1280px) { ... }
     },
     colors: {
