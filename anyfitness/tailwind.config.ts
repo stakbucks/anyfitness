@@ -22,19 +22,20 @@ const config: Config = {
       // => @media (min-width: 1280px) { ... }
     },
     colors: {
-      B: '#33333',
-      G6: '#60606',
-      G5: '#7C7C7C',
-      G4: '#97979',
-      G3: '#D9D9D',
-      G2: '#E0E0E',
-      G1: '#F5F5F5',
-      BLUE: '#1352A3',
-      RED: '#EC1C24',
-      W: '#FFFFF',
-      IMGBG: '#F9F9F',
-      FOOTER: '#EFEFE',
+      'theme-B': '#333333',
+      'theme-G6': '#606060',
+      'theme-G5': '#7C7C7C',
+      'theme-G4': '#979797',
+      'theme-G3': '#D9D9D9',
+      'theme-G2': '#E0E0E0',
+      'theme-G1': '#F5F5F5',
+      'theme-BLUE': '#1352A3',
+      ' theme-RED': '#EC1C24',
+      'theme-W': '#FFFFFF',
+      'theme-IMGBG': '#F9F9F9',
+      'theme-FOOTER': '#EFEFEF',
     },
+
     fontSize: {
       'KOR-lg-H': [
         '40px',

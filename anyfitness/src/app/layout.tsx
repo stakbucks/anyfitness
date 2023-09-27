@@ -1,9 +1,10 @@
+import NavigationBar from '@/components/NavigationBar/NavigationBar';
 import './globals.css';
 import type { Metadata } from 'next';
 import { Montserrat } from 'next/font/google';
 import localFont from 'next/font/local';
 
-const monsterrat = Montserrat({ subsets: ['latin'], display: 'swap' });
+export const monsterrat = Montserrat({ subsets: ['latin'], display: 'swap' });
 
 export const pretendard = localFont({
   src: './PretendardVariable.woff2',
@@ -22,7 +23,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={monsterrat.className}>{children}</body>
+      <body className={pretendard.className}>
+        <NavigationBar />
+        {children}
+      </body>
     </html>
   );
 }
