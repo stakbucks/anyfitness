@@ -3,6 +3,7 @@ import { Dispatch, SetStateAction, useRef } from 'react';
 import Logo from '../../../../../public/logo.png';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import SideBarItems from './SideBarItems/SideBarItems';
 
 type Props = {
   isSideBarOpen: boolean;
@@ -14,7 +15,7 @@ export default function SideBar({ isSideBarOpen, setIsSideBarOpen }: Props) {
   useModalOff(sideBarRef, isSideBarOpen, setIsSideBarOpen);
   return (
     <>
-      <div className="fixed top-0 left-0 w-[100vw] h-[100vh] backdrop-blur-[2px] z-49 bg-[#11111126]">
+      <div className="fixed top-0 left-0 w-[100vw] h-[100vh] backdrop-blur-[2px] z-49  bg-[#11111126]">
         <motion.section
           initial={{ opacity: 1, x: -274 }}
           transition={{ ease: 'easeInOut', duration: 0.5 }}
@@ -28,8 +29,9 @@ export default function SideBar({ isSideBarOpen, setIsSideBarOpen }: Props) {
             src={Logo}
             width={136}
             height={50}
-            className="w-[136px] h-[50px]"
+            className="w-[136px] h-[50px] mb-[20px]"
           />
+          <SideBarItems />
         </motion.section>
       </div>
     </>
