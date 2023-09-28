@@ -20,6 +20,7 @@ export default function NavItems() {
           key={idx}
           item={item}
           setIsProductHovered={setIsProductHovered}
+          dropdownOpen={dropdownOpen}
         />
       ))}
       {dropdownOpen && (

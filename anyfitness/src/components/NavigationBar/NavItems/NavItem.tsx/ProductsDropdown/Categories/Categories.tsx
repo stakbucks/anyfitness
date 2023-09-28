@@ -1,5 +1,10 @@
 import Category from './Category/Category';
 
+type Props = {
+  onMouseEnter(): void;
+  onMouseLeave(): void;
+};
+
 export type ICategory = {
   category: string;
   items: {
@@ -70,9 +75,13 @@ const categories: ICategory[] = [
   },
 ];
 
-export default function Categories() {
+export default function Categories({ onMouseEnter, onMouseLeave }: Props) {
   return (
-    <div className="absolute w-auto h-auto top-[55px] left-0  pt-[12px] pb-[20px] grid grid-cols-3 gap-[15.5px]">
+    <div
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
+      className="absolute  w-auto h-auto top-[55px] left-0  pt-[12px] pb-[20px] grid grid-cols-3 gap-[15.5px]"
+    >
       {categories.map((category, idx) => (
         <Category
           key={idx}

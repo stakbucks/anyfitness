@@ -9,9 +9,14 @@ import { Dispatch, SetStateAction, useEffect } from 'react';
 type Props = {
   item: INavItem;
   setIsProductHovered: Dispatch<SetStateAction<boolean>>;
+  dropdownOpen: boolean;
 };
 
-export default function NavItem({ item, setIsProductHovered }: Props) {
+export default function NavItem({
+  item,
+  setIsProductHovered,
+  dropdownOpen,
+}: Props) {
   const { name, link } = item;
   const { isHovered, handleMouseEnter, handleMouseLeave } = useHovered();
   useEffect(() => {
@@ -23,7 +28,9 @@ export default function NavItem({ item, setIsProductHovered }: Props) {
     <li
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className="relative hover:text-theme-B "
+      className={`relative hover:text-theme-B ${
+        dropdownOpen && name === '제품소개' && 'text-theme-B'
+      }`}
     >
       {/**
        * 쇼핑몰인 경우만 a 태그 처리 (외부 링크)
@@ -33,7 +40,7 @@ export default function NavItem({ item, setIsProductHovered }: Props) {
       ) : (
         <Link href={link}>{name}</Link>
       )}
-      {isHovered && (
+      {(isHovered || (name === '제품소개' && dropdownOpen)) && (
         <>
           <div className="bg-theme-B h-[4px] w-full absolute top-[32px] " />
         </>
