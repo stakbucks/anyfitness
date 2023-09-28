@@ -27,7 +27,7 @@ export default function NavItem({
     <li
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className={`relative hover:text-theme-B ${
+      className={`relative hover:text-theme-B z-[50] ${
         dropdownOpen && name === '제품소개' && 'text-theme-B'
       }`}
     >
@@ -37,10 +37,12 @@ export default function NavItem({
       {name === '쇼핑몰' ? (
         <a href={link}>{name}</a>
       ) : (
-        <Link href={link}>{name}</Link>
+        <Link className="text-[20px] font-[700]" href={link}>
+          {name}
+        </Link>
       )}
       {isHovered && (
-        <div className="bg-theme-B h-[4px] w-full absolute top-[32px] z-[50] " />
+        <div className="bg-theme-B h-[4px] w-full absolute top-[32px] z-[51] " />
       )}
     </li>
   );

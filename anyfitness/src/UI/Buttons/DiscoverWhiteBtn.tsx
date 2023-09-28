@@ -1,21 +1,19 @@
+import Link from 'next/link';
 import { monsterrat } from '../../app/layout';
 
 type Props = {
   className?: string;
+  to: string;
 };
 
-const dynamicSizes = {
-  mobile: `w-[157px] h-[30px]  rounded-[8px] text-ENG-sm-C2 `,
-  lg: `lg:w-[201px] lg:h-[47px] lg:rounded-[8px] lg:text-ENG-lg-H4`,
-  xl: `xl:w-[218px] xl:h-[50px] xl:rounded-[8px] xl:text-ENG-lg-H3`,
-};
-
-export default function DiscoverWhiteBtn({ className }: Props) {
+export default function DiscoverWhiteBtn({ className, to }: Props) {
   return (
-    <button
-      className={` ${monsterrat.className} flex justify-center items-center bg-theme-W  border-[1px] border-solid border-theme-B  ${dynamicSizes.xl} ${dynamicSizes.lg} ${dynamicSizes.mobile}  ${className}`}
-    >
-      DISCOVER MORE
-    </button>
+    <Link href={to} className={className}>
+      <button
+        className={` ${monsterrat.className} flex justify-center items-center bg-theme-W  border-[1px] border-solid border-theme-B w-[157px] h-[37px]  rounded-[8px] text-ENG-sm-C2  `}
+      >
+        DISCOVER MORE
+      </button>
+    </Link>
   );
 }
