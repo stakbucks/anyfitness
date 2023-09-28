@@ -6,9 +6,9 @@ import NavItem from './NavItem.tsx/NavItem';
 import ProductDropdown from './NavItem.tsx/ProductsDropdown/ProductsDropdown';
 
 export default function NavItems() {
-  const [isProductHovered, setIsProductHovered] = useState(false);
-  const [isDropdownHovered, setIsDropdownHovered] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [isProductHovered, setIsProductHovered] = useState(false); // 제품소개 호버 여부
+  const [isDropdownHovered, setIsDropdownHovered] = useState(false); // 드롭다운 호버 여부
+  const [dropdownOpen, setDropdownOpen] = useState(false); // 드롭다운 열렸는지 여부
   useEffect(() => {
     if (isProductHovered || isDropdownHovered) setDropdownOpen(true);
     else setDropdownOpen(false);

@@ -36,7 +36,7 @@ export default function NavigationBar() {
           />
         </Link>
 
-        {/* 컴퓨터 크기 */}
+        {/* 데스크탑 */}
         <NavItems />
 
         {/* 모바일 (720이하) */}

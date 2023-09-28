@@ -23,7 +23,6 @@ export default function NavItem({
     if (name === '제품소개' && isHovered) setIsProductHovered(true);
     else setIsProductHovered(false);
   }, [name, isHovered]);
-
   return (
     <li
       onMouseEnter={handleMouseEnter}
@@ -40,10 +39,8 @@ export default function NavItem({
       ) : (
         <Link href={link}>{name}</Link>
       )}
-      {(isHovered || (name === '제품소개' && dropdownOpen)) && (
-        <>
-          <div className="bg-theme-B h-[4px] w-full absolute top-[32px] " />
-        </>
+      {isHovered && (
+        <div className="bg-theme-B h-[4px] w-full absolute top-[32px] z-[50] " />
       )}
     </li>
   );
