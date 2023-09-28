@@ -23,8 +23,8 @@ export const navItems: INavItem[] = [
 
 export default function NavigationBar() {
   return (
-    <header className="flex w-[100vw] h-[85px] justify-center">
-      <nav className=" sp:w-[1424px] sp:mx-auto lg:w-[928px] lg:mx-[48px] mx-[24px] w-[100vw]  h-full flex justify-between items-center">
+    <header className="fixed top-0 left-0 flex w-[100vw] h-[85px] justify-center z-2 bg-theme-W">
+      <nav className=" sp:w-[1424px] z-[21  ] sp:mx-auto lg:w-[928px] lg:mx-[48px] mx-[24px] w-[100vw]  h-full flex justify-between items-center">
         <Image
           alt="logo"
           src={Logo}
@@ -33,7 +33,7 @@ export default function NavigationBar() {
           className="w-[152px] h-[56px]"
         />
 
-        {/* 컴퓨터 */}
+        {/* 컴퓨터 크기 */}
         <NavItems />
 
         {/* 모바일 (720이하) */}

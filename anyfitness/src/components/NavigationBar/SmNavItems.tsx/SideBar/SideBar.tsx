@@ -14,14 +14,14 @@ export default function SideBar({ isSideBarOpen, setIsSideBarOpen }: Props) {
   useModalOff(sideBarRef, isSideBarOpen, setIsSideBarOpen);
   return (
     <>
-      <div className="fixed top-0 left-0 w-[100vw] h-[100vh] backdrop-blur-[2px] bg-[#11111126]">
+      <div className="fixed top-0 left-0 w-[100vw] h-[100vh] backdrop-blur-[2px] z-49 bg-[#11111126]">
         <motion.section
           initial={{ opacity: 1, x: -274 }}
           transition={{ ease: 'easeInOut', duration: 0.5 }}
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 1, x: -274 }}
           ref={sideBarRef}
-          className="fixed z-100 top-0 left-0  w-[274px] h-full bg-theme-W pt-[60px] flex flex-col pl-[24px] "
+          className="fixed z-50 top-0 left-0  w-[274px] h-full bg-theme-W pt-[60px] flex flex-col pl-[24px] "
         >
           <Image
             alt="로고"
