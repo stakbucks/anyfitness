@@ -80,7 +80,7 @@ export default function Categories({ onMouseEnter, onMouseLeave }: Props) {
     <div
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
-      className="absolute w-auto h-auto top-[55px] left-0  pt-[12px] pb-[20px] grid grid-cols-3 gap-[15.5px]"
+      className="absolute z-[100] bg-theme-W w-auto h-auto top-[55px] left-0  pt-[12px] pb-[20px] grid grid-cols-3 gap-[15.5px]"
     >
       {categories.map((category, idx) => (
         <Category

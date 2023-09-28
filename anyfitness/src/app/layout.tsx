@@ -24,8 +24,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={pretendard.className}>
-        <NavigationBar />
         {children}
+        <NavigationBar />
         <div id="portal" />
       </body>
     </html>

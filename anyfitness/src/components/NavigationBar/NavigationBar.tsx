@@ -24,15 +24,15 @@ export const navItems: INavItem[] = [
 
 export default function NavigationBar() {
   return (
-    <header className="fixed top-0 left-0 flex w-[100vw] h-[85px] justify-center z-2 bg-theme-W">
-      <nav className=" sp:w-[1424px] z-[21] sp:mx-auto lg:w-[928px] lg:mx-[48px] mx-[24px] w-[100vw]  h-full flex justify-between items-center">
-        <Link href="/">
+    <header className="fixed top-0 left-0 flex w-[100vw] h-[85px] justify-center bg-theme-W">
+      <nav className=" sp:w-[1424px] sp:mx-auto lg:w-[928px] lg:mx-[48px] mx-[24px] w-[100vw]  h-full flex justify-between items-center">
+        <Link className="z-[100]" href="/">
           <Image
             alt="logo"
             src={Logo}
             width={152}
             height={56}
-            className="w-[152px] h-[56px]"
+            className="w-[152px] h-[56px] "
           />
         </Link>
 
