@@ -16,11 +16,15 @@ export default function Brand({ brand }: Props) {
       }`}
     >
       <ExamplePhoto img={img} isDiamond={name === 'DIAMOND'} />
-      <div className="xl:max-w-[360px] xl:ml-[48px] xl:mr-[60px] mx-[24px]">
-        <h3 className={`${monsterrat.className} text-ENG-sm-H1 mt-[24px]`}>
+      <div className=" sp:w-[439px] xl:w-[360px] sp:ml-[102px] xl:ml-[48px] sp:mr-[324px] xl:mr-[75px] mx-[24px]">
+        <h3
+          className={`${monsterrat.className}  xl:text-ENG-lg-H2 text-ENG-sm-H1 xl:mt-[60px] mt-[24px]`}
+        >
           {name}
         </h3>
-        <p className=" my-[16px] text-theme-G6 text-KOR-sm-B2">{description}</p>
+        <p className="xl:mt-[24px] sp:mb-[48px] xl:mb-[40px] mt-[16px] mb-[16px] text-theme-G6 sp:text-KOR-lg-H5 xl:text-KOR-lg-B1 text-KOR-sm-B2">
+          {description}
+        </p>
         <DiscoverBlackBtn to={link} />
       </div>
     </li>
