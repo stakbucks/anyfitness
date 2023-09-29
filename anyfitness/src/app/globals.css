@@ -135,3 +135,12 @@ li {
   list-style-type: none;
   list-style: none;
 }
+#products-info__items::-webkit-scrollbar {
+  height: 4px;
+}
+#products-info__items::-webkit-scrollbar-track {
+  background-color: #d9d9d9;
+}
+#products-info__items::-webkit-scrollbar-thumb {
+  background-color: #7c7c7c;
+}
