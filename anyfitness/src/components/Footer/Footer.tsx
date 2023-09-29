@@ -70,7 +70,7 @@ export default function Footer() {
             </ul>
           </div>
           <span
-            className={`${monsterrat.className} xl:absolute xl:left-0 xl:bottom-[-15px] text-theme-G4 text-ENG-sm-C2`}
+            className={`${monsterrat.className} xl:absolute xl:left-0 xl:bottom-[-15px] mt-[16px] text-theme-G4 text-ENG-sm-C2`}
           >
             {COPYRIGHT_TEXT}
           </span>
