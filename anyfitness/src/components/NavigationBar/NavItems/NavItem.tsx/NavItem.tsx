@@ -35,9 +35,11 @@ export default function NavItem({
        * 쇼핑몰인 경우만 a 태그 처리 (외부 링크)
        */}
       {name === '쇼핑몰' ? (
-        <a href={link}>{name}</a>
+        <a className="text-[18px] font-[500]" href={link}>
+          {name}
+        </a>
       ) : (
-        <Link className="text-[20px] font-[700]" href={link}>
+        <Link className="text-[18px] font-[500]" href={link}>
           {name}
         </Link>
       )}

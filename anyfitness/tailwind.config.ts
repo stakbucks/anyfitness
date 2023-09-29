@@ -31,7 +31,7 @@ const config: Config = {
       'theme-G2': '#E0E0E0',
       'theme-G1': '#F5F5F5',
       'theme-BLUE': '#1352A3',
-      ' theme-RED': '#EC1C24',
+      'theme-RED': '#EC1C24',
       'theme-W': '#FFFFFF',
       'theme-IMGBG': '#F9F9F9',
       'theme-FOOTER': '#EFEFEF',
@@ -283,6 +283,13 @@ const config: Config = {
         {
           lineHeight: '1.2',
           fontWeight: 800,
+        },
+      ],
+      'ENG-sm-B1': [
+        '16px',
+        {
+          lineHeight: '1.4',
+          fontWeight: 500,
         },
       ],
       'ENG-sm-C3': [
