@@ -1,5 +1,7 @@
+import Footer from '@/components/Footer/Footer';
 import Banner from '@/components/Landing/Banner/Banner';
 import Brands from '@/components/Landing/Brands/Brands';
+import GoShopping from '@/components/Landing/GoShopping/GoShopping';
 import ProductsIntro from '@/components/Landing/ProductsIntro/ProductsIntro';
 
 export default function Home() {
@@ -8,6 +10,8 @@ export default function Home() {
       <Banner />
       <Brands />
       <ProductsIntro />
+      <GoShopping />
+      <Footer />
     </main>
   );
 }

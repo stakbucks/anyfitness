@@ -303,7 +303,7 @@ const config: Config = {
         '14px',
         {
           lineHeight: '1.5',
-          fontWeight: 600,
+          fontWeight: 500,
         },
       ],
       'ENG-sm-C1': [
