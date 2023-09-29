@@ -27,19 +27,19 @@ const cardioCategories: IProductsIntroCategory[] = [
     name: '가정용 런닝머신',
     engName: 'Home Treadmill',
     img: HOME,
-    link: '/cardio/home',
+    link: '/products/cardio/home',
   },
   {
     name: '클럽용 런닝머신',
     engName: 'Club Treadmill',
     img: CLUB,
-    link: '/cardio/club',
+    link: '/products/cardio/club',
   },
   {
     name: '헬스 자전거',
     engName: 'Cycle',
     img: CYCLE,
-    link: '/cardio/cycle',
+    link: '/products/cardio/cycle',
   },
 ];
 
@@ -48,25 +48,25 @@ const outdoorCategories: IProductsIntroCategory[] = [
     name: '200 시리즈',
     engName: '200 Series',
     img: S200,
-    link: '/outdoor/200',
+    link: '/products/outdoor/200',
   },
   {
     name: '300 시리즈',
     engName: '300 Series',
     img: S300,
-    link: '/outdoor/300',
+    link: '/products/outdoor/300',
   },
   {
     name: '400 시리즈',
     engName: '400 Series',
     img: S400,
-    link: '/outdoor/400',
+    link: '/products/outdoor/400',
   },
   {
     name: '600 시리즈',
     engName: '600 Series',
     img: S600,
-    link: '/outdoor/600',
+    link: '/products/outdoor/600',
   },
 ];
 
@@ -77,13 +77,15 @@ export default function ProductsIntro() {
   const handleCardioClick = () => setFilter('cardio');
   const handleOutdoorClick = () => setFilter('outdoor');
   return (
-    <section className="w-screen flex justify-center bg-theme-G1">
-      <div className="w-full px-[24px] py-[40px] h-auto min-h-[587px]">
-        <h2 className="text-theme-B text-KOR-sm-H2">제품소개</h2>
-        <p className="mt-[8px] text-theme-B text-KOR-sm-B2">
+    <section className="w-screen xl:h-auto xl:py-[60px] flex justify-center  bg-theme-G1">
+      <div className="w-full sp:w-[1424px] xl:w-[916px] px-[24px] py-[40px] xl:p-0 h-auto min-h-[587px]">
+        <h2 className="text-theme-B sp:text-KOR-lg-H0 xl:text-KOR-lg-H1 text-KOR-sm-H2">
+          제품소개
+        </h2>
+        <p className="sp:mt-[12px] mt-[8px] text-theme-G5 sp:text-KOR-lg-H3 xl:text-KOR-lg-H5 text-KOR-sm-B2">
           {DESCRIPTION_TEXT}
         </p>
-        <ul className="flex gap-[12px] mt-[16px]">
+        <ul className="flex gap-[12px] sp:mt-[28px] xl:mt-[20px] mt-[16px]">
           <li>
             <FilterBtn
               onClick={handleCardioClick}
