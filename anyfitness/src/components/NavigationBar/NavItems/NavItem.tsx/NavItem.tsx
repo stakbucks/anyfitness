@@ -5,6 +5,7 @@ import { INavItem } from '../../NavigationBar';
 import useHovered from '@/hooks/useHovered';
 import ProductDropdown from './ProductsDropdown/ProductsDropdown';
 import { Dispatch, SetStateAction, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 
 type Props = {
   item: INavItem;
@@ -17,6 +18,8 @@ export default function NavItem({
   setIsProductHovered,
   dropdownOpen,
 }: Props) {
+  const pathname = usePathname();
+
   const { name, link } = item;
   const { isHovered, handleMouseEnter, handleMouseLeave } = useHovered();
   useEffect(() => {
@@ -28,7 +31,8 @@ export default function NavItem({
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       className={`relative hover:text-theme-B z-[100] ${
-        dropdownOpen && name === '제품소개' && 'text-theme-B'
+        (pathname.includes(link) || (dropdownOpen && name === '제품소개')) &&
+        'text-theme-B'
       }`}
     >
       {/**
@@ -39,7 +43,9 @@ export default function NavItem({
       ) : (
         <Link href={link}>{name}</Link>
       )}
-      {(isHovered || (dropdownOpen && name === '제품소개')) && (
+      {(isHovered ||
+        pathname.includes(link) ||
+        (dropdownOpen && name === '제품소개')) && (
         <div className="bg-theme-B h-[4px] w-full absolute top-[32px]" />
       )}
     </li>
