@@ -1,10 +1,12 @@
 import Image from 'next/image';
 import Logo from '../../../public/logo.png';
-import { monsterrat } from '@/app/layout';
 import LocationIcon from '@/UI/Icons/LocationIcon';
 import CallIcon from '@/UI/Icons/CallIcon';
 import FaxIcon from '@/UI/Icons/FaxIcon';
 import MailIcon from '@/UI/Icons/MailIcon';
+import { Montserrat } from 'next/font/google';
+
+export const monsterrat = Montserrat({ subsets: ['latin'], display: 'swap' });
 
 const ABOUT_US_TEXT =
   '‘MADE IN KOREA’의 위상을 걸고 저희 애니휘트니스는 고객 만족을 위해 최고의 상품과 서비스 제공에 주력할 것을 약속하며 고객만족을 최우선 가치로 삼아 항상 창조적인 기업이 되겠습니다.';

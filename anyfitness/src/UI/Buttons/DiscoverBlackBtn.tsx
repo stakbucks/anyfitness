@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { monsterrat } from '../../app/layout';
+import { Montserrat } from 'next/font/google';
+export const monsterrat = Montserrat({ subsets: ['latin'], display: 'swap' });
 type Props = {
   className?: string;
   to: string;

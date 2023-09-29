@@ -1,7 +1,8 @@
 import { IBrand } from '../Brands';
 import ExamplePhoto from './ExamplePhoto/ExamplePhoto';
-import { monsterrat } from '../../../../app/layout';
 import DiscoverBlackBtn from '@/UI/Buttons/DiscoverBlackBtn';
+import { Montserrat } from 'next/font/google';
+export const monsterrat = Montserrat({ subsets: ['latin'], display: 'swap' });
 
 type Props = {
   brand: IBrand;

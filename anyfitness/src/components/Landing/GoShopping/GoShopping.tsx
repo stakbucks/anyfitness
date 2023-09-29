@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Banner from '../../../../public/landing/shoppingMall.png';
-import { monsterrat } from '@/app/layout';
+import { Montserrat } from 'next/font/google';
+export const monsterrat = Montserrat({ subsets: ['latin'], display: 'swap' });
 
 export default function GoShopping() {
   return (

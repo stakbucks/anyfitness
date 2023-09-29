@@ -4,8 +4,8 @@ import DIAMOND from '../../../../public/landing/examples/diamond_big.png';
 import ASERIES from '../../../../public/landing/examples/aseries_big.png';
 import { StaticImageData } from 'next/image';
 import Brand from './Brand/Brand';
-import { monsterrat } from '@/app/layout';
-
+import { Montserrat } from 'next/font/google';
+export const monsterrat = Montserrat({ subsets: ['latin'], display: 'swap' });
 const dynamicSizes = {
   mobile: `w-full  pt-[36px]`,
 };
