@@ -22,8 +22,8 @@ export default function History() {
                 {year}
               </p>
               <div className="flex flex-col justify-center xl:gap-[6px] gap-[4px]">
-                {details.map(({ month, description, highlight }) => (
-                  <p className="flex items-center">
+                {details.map(({ month, description, highlight }, idx) => (
+                  <p key={idx} className="flex items-center">
                     <span className="text-theme-G6 xl:text-KOR-lg-B5 text-KOR-sm-C5 mr-[28px] w-[24px] ">
                       {month.toString().padStart(2, '0')}
                     </span>
