@@ -42,35 +42,35 @@ const config: Config = {
         '40px',
         {
           lineHeight: '1',
-          fontWeight: 700,
+          fontWeight: 600,
         },
       ],
       'KOR-lg-H0': [
         '36px',
         {
           lineHeight: '1.2',
-          fontWeight: 800,
+          fontWeight: 700,
         },
       ],
       'KOR-lg-H1': [
         '24px',
         {
           lineHeight: '1.2',
-          fontWeight: 800,
+          fontWeight: 700,
         },
       ],
       'KOR-lg-H2': [
         '20px',
         {
           lineHeight: '1.4',
-          fontWeight: 800,
+          fontWeight: 700,
         },
       ],
       'KOR-lg-H3': [
         '20px',
         {
           lineHeight: '1.2',
-          fontWeight: 700,
+          fontWeight: 600,
           letterSpacing: '0.4px',
         },
       ],
@@ -78,7 +78,7 @@ const config: Config = {
         '18px',
         {
           lineHeight: '1.2',
-          fontWeight: 600,
+          fontWeight: 500,
         },
       ],
       'KOR-lg-H5': [
@@ -134,35 +134,35 @@ const config: Config = {
         '56px',
         {
           lineHeight: '1.2',
-          fontWeight: 800,
+          fontWeight: 700,
         },
       ],
       'ENG-lg-H1': [
         '40px',
         {
           lineHeight: '1.2',
-          fontWeight: 800,
+          fontWeight: 700,
         },
       ],
       'ENG-lg-H2': [
         '36px',
         {
           lineHeight: '1.2',
-          fontWeight: 800,
+          fontWeight: 700,
         },
       ],
       'ENG-lg-H3': [
         '20px',
         {
           lineHeight: '1.5',
-          fontWeight: 600,
+          fontWeight: 500,
         },
       ],
       'ENG-lg-H4': [
         '18px',
         {
           lineHeight: '1.5',
-          fontWeight: 600,
+          fontWeight: 500,
         },
       ],
       'ENG-lg-B1': [
@@ -176,7 +176,7 @@ const config: Config = {
         '14px',
         {
           lineHeight: '1.6',
-          fontWeight: 700,
+          fontWeight: 600,
         },
       ],
       'ENG-lg-C2': [
@@ -190,28 +190,28 @@ const config: Config = {
         '32px',
         {
           lineHeight: '1',
-          fontWeight: 700,
+          fontWeight: 600,
         },
       ],
       'KOR-sm-H1': [
         '24px',
         {
           lineHeight: '1.4',
-          fontWeight: 700,
+          fontWeight: 600,
         },
       ],
       'KOR-sm-H2': [
         '20px',
         {
           lineHeight: '1.2',
-          fontWeight: 800,
+          fontWeight: 700,
         },
       ],
       'KOR-sm-H3': [
         '20px',
         {
           lineHeight: '1.2',
-          fontWeight: 700,
+          fontWeight: 600,
           letterSpacing: '0.4px',
         },
       ],
@@ -219,7 +219,7 @@ const config: Config = {
         '18px',
         {
           lineHeight: '1.4',
-          fontWeight: 700,
+          fontWeight: 600,
         },
       ],
       'KOR-sm-B2': [
@@ -275,14 +275,14 @@ const config: Config = {
         '28px',
         {
           lineHeight: '1.2',
-          fontWeight: 800,
+          fontWeight: 700,
         },
       ],
       'ENG-sm-H1': [
         '24px',
         {
           lineHeight: '1.2',
-          fontWeight: 800,
+          fontWeight: 700,
         },
       ],
       'ENG-sm-B1': [
@@ -310,7 +310,7 @@ const config: Config = {
         '14px',
         {
           lineHeight: '1.6',
-          fontWeight: 700,
+          fontWeight: 600,
         },
       ],
     },
