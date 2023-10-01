@@ -56,7 +56,7 @@ const config: Config = {
         '24px',
         {
           lineHeight: '1.2',
-          fontWeight: 700,
+          fontWeight: 600,
         },
       ],
       'KOR-lg-H2': [
@@ -70,7 +70,7 @@ const config: Config = {
         '20px',
         {
           lineHeight: '1.2',
-          fontWeight: 600,
+          fontWeight: 500,
           letterSpacing: '0.4px',
         },
       ],
