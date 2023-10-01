@@ -1,5 +1,6 @@
 import Carousel from '../Carousel/Carousel';
 import SectionTitle from '../SectionTitle/SectionTitle';
+import Slider from '../Slider/Slider';
 
 export default async function Facilities() {
   const facilities = await fetch('http://localhost:3000/api/facilities').then(
@@ -20,7 +21,7 @@ export default async function Facilities() {
         <Carousel type="facility" cols={3} items={facilities} />
 
         {/* 모바일 */}
-        {/* <Slider certificates={certificates} /> */}
+        <Slider type="facility" items={facilities} />
       </section>
     </section>
   );

@@ -15,7 +15,7 @@ export default function CarouselBtnLeft({ setOffset, setDirection }: Props) {
   return (
     <button
       onClick={handleClick}
-      className="rounded-full absolute top-[40%] left-0 -translate-y-[50%]"
+      className="rounded-full absolute top-[35%] left-0 -translate-y-[50%]"
     >
       <Image
         alt="왼쪽 버튼"

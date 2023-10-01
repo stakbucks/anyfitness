@@ -26,7 +26,7 @@ export default async function Certificates() {
       <Carousel type="certificate" items={certificates} cols={4} />
 
       {/* 모바일 */}
-      <Slider certificates={certificates} />
+      <Slider type="certificate" items={certificates} />
     </section>
   );
 }
