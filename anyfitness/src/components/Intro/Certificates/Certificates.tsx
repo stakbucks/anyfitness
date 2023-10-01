@@ -1,13 +1,13 @@
-import Image from 'next/image';
+import Carousel from '../Carousel/Carousel';
 import SectionTitle from '../SectionTitle/SectionTitle';
-import RightCarouselBtn from '../../../../public/intro/rightCarouselBtn.svg';
-import leftCarouselBtn from '../../../../public/intro/leftCarouselBtn.svg';
+
+import { ICertificate } from '@/interface/certificate';
 
 export default async function Certificates() {
-  const certificates = await fetch('/api/certificates').then((res) =>
-    res.json()
-  );
-  console.log(certificates);
+  const certificates: ICertificate[] = await fetch(
+    'http://localhost:3000/api/certificates'
+  ).then((res) => res.json());
+
   return (
     <section className="xl:mt-[80px] xl:my-[80px] my-[40px] xl:w-[900px] w-screen xl:px-0 px-[24px] ">
       <div className="flex xl:flex-row flex-col xl:justify-between xl:gap-0 gap-[16px] xl:mb-[60px] mb-[20px]">
@@ -24,26 +24,7 @@ export default async function Certificates() {
       {/** 카루셀 구현
        * 한 페이지에 4개씩
        */}
-      <div className="relative xl:w-full px-[50px] pb-[32px] grid grid-cols-4 overflow-x-scroll">
-        <button className="rounded-full absolute top-[50%] left-0 -translate-y-[50%]">
-          <Image
-            alt="왼쪽 버튼"
-            src={leftCarouselBtn}
-            width={30}
-            height={30}
-            className="rounded-full"
-          />
-        </button>
-        <button className="rounded-full absolute top-[50%] right-0 -translate-y-[50%]">
-          <Image
-            alt="오른쪽 버튼"
-            src={RightCarouselBtn}
-            width={30}
-            height={30}
-            className="rounded-full"
-          />
-        </button>
-      </div>
+      <Carousel certificates={certificates} />
     </section>
   );
 }

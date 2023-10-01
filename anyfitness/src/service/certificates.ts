@@ -10,10 +10,9 @@ export async function getCertificates() {
   const data = await client.fetch(`*[_type == "certificates"]{${projection}}`);
   return convertCertificate(data);
 }
-function convertCertificate(certificates: any) {
-  return certificates.map((certificate: any) => {
-    return certificate.image.asset
-      ? { ...certificate, image: urlFor(certificate.image) }
-      : { ...certificate, image: certificate.image._upload.previewImage };
-  });
+function convertCertificate(certificates: ICertificate[]) {
+  return certificates.map((certificate: ICertificate) => ({
+    id: certificate.id,
+    image: urlFor(certificate.image),
+  }));
 }

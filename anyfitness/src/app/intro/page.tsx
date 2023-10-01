@@ -9,7 +9,7 @@ export default function IntroPage() {
       <IntroBanner />
       <Description />
       <History />
-      {/* <Certificates /> */}
+      <Certificates />
     </div>
   );
 }
