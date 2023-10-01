@@ -11,8 +11,8 @@ export default function IntroPage() {
       <IntroBanner />
       <Description />
       <History />
-      {/* <Certificates />
-      <Facilities /> */}
+      <Certificates />
+      <Facilities />
       <Footer />
     </div>
   );
