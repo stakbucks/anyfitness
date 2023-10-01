@@ -2,12 +2,11 @@ import Image from 'next/image';
 import SectionTitle from '../SectionTitle/SectionTitle';
 import RightCarouselBtn from '../../../../public/intro/rightCarouselBtn.svg';
 import leftCarouselBtn from '../../../../public/intro/leftCarouselBtn.svg';
-import { urlFor } from '@/service/sanity';
 
 export default async function Certificates() {
-  const certificates = await fetch(
-    'http://localhost:3000/api/certificates'
-  ).then((res) => res.json());
+  const certificates = await fetch('/api/certificates').then((res) =>
+    res.json()
+  );
   console.log(certificates);
   return (
     <section className="xl:mt-[80px] xl:my-[80px] my-[40px] xl:w-[900px] w-screen xl:px-0 px-[24px] ">
