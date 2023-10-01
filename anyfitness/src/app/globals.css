@@ -154,3 +154,13 @@ li {
 #slider::-webkit-scrollbar-thumb {
   background-color: #7c7c7c;
 }
+#mobile-slider::-webkit-scrollbar {
+  height: 4px;
+}
+#mobile-slider::-webkit-scrollbar-track {
+  margin-right: 52px;
+  background-color: #d9d9d9;
+}
+#mobile-slider::-webkit-scrollbar-thumb {
+  background-color: #7c7c7c;
+}

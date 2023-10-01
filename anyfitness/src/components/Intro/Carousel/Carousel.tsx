@@ -6,7 +6,7 @@ import { ICertificate } from '@/interface/certificate';
 import CarouselBtnLeft from './CarouselBtn/CarouselBtnLeft';
 import CarouselBtnRight from './CarouselBtn/CarouselBtnRight';
 import { AnimatePresence, motion } from 'framer-motion';
-import CarouselItems from './CarouselItems.tsx/CarouselItems';
+import CarouselItems from './Items/Items';
 
 type Props = {
   certificates: ICertificate[];

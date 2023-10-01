@@ -2,6 +2,7 @@ import Carousel from '../Carousel/Carousel';
 import SectionTitle from '../SectionTitle/SectionTitle';
 
 import { ICertificate } from '@/interface/certificate';
+import Slider from '../Slider/Slider';
 
 export default async function Certificates() {
   const certificates: ICertificate[] = await fetch(
@@ -21,10 +22,11 @@ export default async function Certificates() {
         </p>
       </div>
 
-      {/** 카루셀 구현
-       * 한 페이지에 4개씩
-       */}
+      {/* 데스크탑 */}
       <Carousel certificates={certificates} />
+
+      {/* 모바일 */}
+      <Slider certificates={certificates} />
     </section>
   );
 }
