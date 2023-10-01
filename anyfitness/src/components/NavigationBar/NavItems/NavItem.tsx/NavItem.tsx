@@ -1,11 +1,11 @@
 'use client';
 
 import Link from 'next/link';
-import { INavItem } from '../../NavigationBar';
 import useHovered from '@/hooks/useHovered';
 import ProductDropdown from './ProductsDropdown/ProductsDropdown';
 import { Dispatch, SetStateAction, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
+import { INavItem } from '@/objects/navItems';
 
 type Props = {
   item: INavItem;

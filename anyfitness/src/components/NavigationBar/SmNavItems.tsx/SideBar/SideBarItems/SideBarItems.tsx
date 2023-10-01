@@ -1,6 +1,6 @@
-import { navItems } from '@/components/NavigationBar/NavigationBar';
 import Link from 'next/link';
 import ProductsCategories from './ProductsCategories/ProductsCategories';
+import { navItems } from '@/objects/navItems';
 
 export default function SideBarItems() {
   return (

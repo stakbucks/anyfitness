@@ -9,19 +9,6 @@ import NavItems from './NavItems/NavItems';
 import SmNavItems from './SmNavItems.tsx/SmNavItems';
 import Link from 'next/link';
 
-export type INavItem = {
-  name: string;
-  link: string;
-};
-
-export const navItems: INavItem[] = [
-  { name: '회사소개', link: '/intro' },
-  { name: '제품소개', link: '/products' },
-  { name: '납품사례', link: '/cases' },
-  { name: '자료실', link: '/docs' },
-  { name: '쇼핑몰', link: 'http://www.anyfitnessmall.co.kr/' },
-];
-
 export default function NavigationBar() {
   return (
     <header className="fixed top-0 left-0 flex w-[100vw] lg:h-[85px] h-[60px]  justify-center bg-theme-W z-[3]">
