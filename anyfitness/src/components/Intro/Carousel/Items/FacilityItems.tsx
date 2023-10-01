@@ -12,7 +12,7 @@ export default function FacilityItems({ items }: Props) {
       {items.map(({ id, name, image }: IFacility) => (
         <div
           key={id}
-          className="xl:w-[258px] xl:h-[207px] flex flex-col gap-[8px] items-center"
+          className="xl:w-[258px] xl:h-[207px] min-w-[242px] h-[193px] flex flex-col gap-[8px] items-center"
         >
           <Image
             alt="인증서"
