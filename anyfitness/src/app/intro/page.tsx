@@ -2,6 +2,8 @@ import Description from '@/components/Intro/Description/Description';
 import IntroBanner from '@/components/Intro/IntroBanner/IntroBanner';
 import History from '@/components/Intro/History/History';
 import Certificates from '@/components/Intro/Certificates/Certificates';
+import Facilities from '@/components/Intro/Facilities/Facilities';
+import Footer from '@/components/Footer/Footer';
 
 export default function IntroPage() {
   return (
@@ -10,6 +12,8 @@ export default function IntroPage() {
       <Description />
       <History />
       <Certificates />
+      <Facilities />
+      <Footer />
     </div>
   );
 }

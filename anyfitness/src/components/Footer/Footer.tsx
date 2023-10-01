@@ -32,7 +32,7 @@ const contactItems = [
 
 export default function Footer() {
   return (
-    <footer className=" w-screen h-auto xl:px-[40px] px-[24px] py-[40px] mt-[87px]  bg-theme-FOOTER flex xl:justify-center">
+    <footer className=" w-screen h-auto xl:px-[40px] px-[24px] py-[40px]  bg-theme-FOOTER flex xl:justify-center">
       <div className="relative xl:flex xl:flex-row xl:justify-between flex flex-col xl:pb-[35px] xl:w-full xl:max-w-[1424px]">
         <Image
           alt="로고"

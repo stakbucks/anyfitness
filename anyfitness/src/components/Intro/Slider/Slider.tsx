@@ -1,5 +1,5 @@
 import { ICertificate } from '@/interface/certificate';
-import Items from '../Carousel/Items/Items';
+import Items from '../Carousel/Items/CertificateItems';
 
 type Props = {
   certificates: ICertificate[];

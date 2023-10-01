@@ -5,7 +5,7 @@ export const monsterrat = Montserrat({ subsets: ['latin'], display: 'swap' });
 
 export default function GoShopping() {
   return (
-    <section className="relative flex flex-col justify-center items-center justify-center sp:my-[60px] xl:w-[1424px] lg:w-[1024px] lg:h-[286px] w-[768px] h-[200px]">
+    <section className="relative flex flex-col justify-center items-center justify-center sp:my-[60px] xl:w-[1424px] lg:w-[1024px] lg:h-[286px]  mb-[87px] w-[768px] h-[200px]">
       <Image
         alt="쇼핑몰가기이미지"
         src={Banner}

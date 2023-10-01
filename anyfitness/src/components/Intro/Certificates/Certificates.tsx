@@ -23,7 +23,7 @@ export default async function Certificates() {
       </div>
 
       {/* 데스크탑 */}
-      <Carousel certificates={certificates} />
+      <Carousel type="certificate" items={certificates} cols={4} />
 
       {/* 모바일 */}
       <Slider certificates={certificates} />

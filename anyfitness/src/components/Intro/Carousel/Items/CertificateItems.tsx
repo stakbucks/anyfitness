@@ -5,7 +5,7 @@ type Props = {
   items: ICertificate[];
 };
 
-export default function Items({ items }: Props) {
+export default function CertificateItem({ items }: Props) {
   return (
     <>
       {items.map(({ id, image }: ICertificate) => (
