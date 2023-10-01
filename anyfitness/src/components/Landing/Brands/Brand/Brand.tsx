@@ -1,6 +1,6 @@
-import { IBrand } from '../Brands';
 import ExamplePhoto from './ExamplePhoto/ExamplePhoto';
 import DiscoverBlackBtn from '@/UI/Buttons/DiscoverBlackBtn';
+import { IBrand } from '@/objects/brands';
 import { Montserrat } from 'next/font/google';
 export const monsterrat = Montserrat({ subsets: ['latin'], display: 'swap' });
 
@@ -8,7 +8,7 @@ type Props = {
   brand: IBrand;
 };
 
-export default function Brand({ brand }: Props) {
+export default function rand({ brand }: Props) {
   const { name, link, img, description } = brand;
   return (
     <li
