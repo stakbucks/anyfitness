@@ -6,9 +6,9 @@ import Slider from '../Slider/Slider';
 import { BASE_URL } from '../Facilities/Facilities';
 
 export default async function Certificates() {
-  const certificates: ICertificate[] = await fetch(`/api/certificates`).then(
-    (res) => res.json()
-  );
+  const certificates: ICertificate[] = await fetch(
+    `${BASE_URL}/api/certificates`
+  ).then((res) => res.json());
 
   return (
     <section className="xl:mt-[80px] xl:my-[80px] my-[40px] xl:w-[900px] w-screen xl:px-0 px-[24px] ">

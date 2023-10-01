@@ -3,7 +3,9 @@ import SectionTitle from '../SectionTitle/SectionTitle';
 import Slider from '../Slider/Slider';
 export const BASE_URL = 'https://anyfitness.vercel.app/';
 export default async function Facilities() {
-  const facilities = await fetch(`/api/facilities`).then((res) => res.json());
+  const facilities = await fetch(`${BASE_URL}/api/facilities`).then((res) =>
+    res.json()
+  );
   return (
     <section className="w-screen h-auto bg-theme-G1 flex justify-center items-center">
       <section className="xl:mt-[80px] xl:my-[80px] my-[40px] xl:w-[900px] w-screen xl:px-0 px-[24px]  ">
