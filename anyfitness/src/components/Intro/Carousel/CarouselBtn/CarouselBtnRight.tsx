@@ -13,7 +13,7 @@ export default function CarouselBtnRight({setOffset,setDirection}:Props) {
     setDirection(1);
   };
   return (
-    <button className="rounded-full absolute top-[50%] right-0 -translate-y-[50%]">
+    <button className="rounded-full absolute top-[40%] right-0 -translate-y-[50%]">
       <Image
       onClick={handleClick}
         alt="오른쪽 버튼"
