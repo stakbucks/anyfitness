@@ -1,5 +1,5 @@
+import { ICategory } from '@/objects/productCatgories';
 import Link from 'next/link';
-import { ICategory } from '../Categories';
 
 type Props = {
   category: ICategory;

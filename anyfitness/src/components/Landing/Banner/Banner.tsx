@@ -1,7 +1,5 @@
 import Image from 'next/image';
 import LandingBanner from '../../../../public/landing/landingBanner.png';
-import AnyfitnessText from '../../../../public/landing/anyfitnessLetter.svg';
-import LandingLetter from '../../../../public/landing/landingLetter.svg';
 import LetterGroup from '../../../../public/landing/letterGroup.svg';
 import DiscoverWhiteBtn from '@/UI/Buttons/DiscoverWhiteBtn';
 
