@@ -1,6 +1,7 @@
 import Description from '@/components/Intro/Description/Description';
 import IntroBanner from '@/components/Intro/IntroBanner/IntroBanner';
 import History from '@/components/Intro/History/History';
+import Certificates from '@/components/Intro/Certificates/Certificates';
 
 export default function IntroPage() {
   return (
@@ -8,6 +9,7 @@ export default function IntroPage() {
       <IntroBanner />
       <Description />
       <History />
+      <Certificates />
     </div>
   );
 }
