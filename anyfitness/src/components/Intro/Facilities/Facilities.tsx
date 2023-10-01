@@ -1,10 +1,10 @@
 import Carousel from '../Carousel/Carousel';
 import SectionTitle from '../SectionTitle/SectionTitle';
 import Slider from '../Slider/Slider';
-
+export const BASE_URL = 'https://anyfitness.vercel.app/';
 export default async function Facilities() {
-  const facilities = await fetch('http://localhost:3000/api/facilities').then(
-    (res) => res.json()
+  const facilities = await fetch(`${BASE_URL}/api/facilities`).then((res) =>
+    res.json()
   );
   return (
     <section className="w-screen h-auto bg-theme-G1 flex justify-center items-center">

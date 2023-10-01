@@ -3,10 +3,11 @@ import SectionTitle from '../SectionTitle/SectionTitle';
 
 import { ICertificate } from '@/interface/certificate';
 import Slider from '../Slider/Slider';
+import { BASE_URL } from '../Facilities/Facilities';
 
 export default async function Certificates() {
   const certificates: ICertificate[] = await fetch(
-    'http://localhost:3000/api/certificates'
+    `${BASE_URL}/api/certificates`
   ).then((res) => res.json());
 
   return (
