@@ -12,13 +12,6 @@ export default function Banner() {
         fill
         className="object-cover w-[100vw] h-full z-0 "
       />
-      {/* <Image
-        alt="anyfitnessText"
-        width={169}
-        height={33}
-        src={AnyfitnessText}
-        className="z-0"
-      /> */}
       <Image
         alt="LandingLetter"
         width={258}
