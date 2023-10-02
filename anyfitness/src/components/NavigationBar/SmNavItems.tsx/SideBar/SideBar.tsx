@@ -31,7 +31,7 @@ export default function SideBar({ isSideBarOpen, setIsSideBarOpen }: Props) {
             height={50}
             className="w-[136px] h-[50px] mb-[20px]"
           />
-          <SideBarItems />
+          <SideBarItems setIsSideBarOpen={setIsSideBarOpen} />
         </motion.section>
       </div>
     </>

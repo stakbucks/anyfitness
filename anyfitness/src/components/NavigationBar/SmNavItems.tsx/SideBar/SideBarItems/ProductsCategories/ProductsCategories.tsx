@@ -1,6 +1,10 @@
 import ArrowUpIcon from '@/UI/Icons/ArrowUpIcon';
 import Link from 'next/link';
-import { useState } from 'react';
+import { Dispatch, SetStateAction, useState } from 'react';
+
+type Props = {
+  setIsSideBarOpen: Dispatch<SetStateAction<boolean>>;
+};
 
 const categories = [
   {
@@ -17,7 +21,7 @@ const categories = [
   },
 ];
 
-export default function ProductsCategories() {
+export default function ProductsCategories({ setIsSideBarOpen }: Props) {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const handleClick = () => setDropdownOpen((prev) => !prev);
   return (
@@ -32,7 +36,12 @@ export default function ProductsCategories() {
       </div>
       {dropdownOpen &&
         categories.map(({ name, link }, idx) => (
-          <Link key={idx} className="text-KOR-sm-B4" href={link}>
+          <Link
+            onClick={() => setIsSideBarOpen(false)}
+            key={idx}
+            className="text-KOR-sm-B4"
+            href={link}
+          >
             {name}
           </Link>
         ))}
