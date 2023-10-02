@@ -11,7 +11,7 @@ export default function History() {
               key={idx}
               className="w-full xl:py-[12px] py-[8px] h-auto flex border-b border-solid border-theme-G2"
             >
-              <p className="text-theme-G6 xl:text-KOR-lg-B5 text-KOR-sm-C5 mr-[24px] w-[44px]">
+              <p className="text-theme-G6 xl:text-KOR-lg-B4 text-KOR-sm-C5 mr-[24px] w-[44px]">
                 {year}
               </p>
               <div className="flex flex-col justify-center xl:gap-[6px] gap-[4px]">
@@ -23,7 +23,7 @@ export default function History() {
                     <p
                       className={`xl:w-auto w-[220px] truncate text-theme-G6 ${
                         highlight
-                          ? 'xl:text-KOR-lg-B5 text-KOR-sm-C5'
+                          ? 'xl:text-KOR-lg-B4 text-KOR-sm-C5'
                           : 'xl:text-KOR-lg-B1 text-KOR-sm-C1'
                       }`}
                     >
