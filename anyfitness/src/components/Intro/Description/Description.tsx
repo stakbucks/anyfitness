@@ -5,7 +5,7 @@ import DescriptionEquipment from '../../../../public/intro/descriptionEquipment.
 
 export default function Description() {
   return (
-    <section className="xl:w-[900px] xl:px-0 w-full px-[24px] xl:my-[100px] my-[36px] xl:flex xl:gap-[53px]">
+    <section className="xl:w-[800px] xl:px-0 w-full px-[24px] xl:my-[100px] my-[36px] xl:flex xl:gap-[53px]">
       <div className="flex flex-col">
         <Image
           alt="anyfitness"

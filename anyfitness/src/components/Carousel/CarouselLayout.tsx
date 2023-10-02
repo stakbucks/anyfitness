@@ -32,6 +32,7 @@ export default function CarouselLayout({ length, cols, children }: Props) {
       {page > 0 && <CarouselBtnLeft setPage={setPage} />}
       {React.cloneElement(children, { page })}
       {page < maxPage && <CarouselBtnRight setPage={setPage} />}
+
       {/* 스크롤 방지용  */}
       <div className="xl:w-[800px] w-0 h-full z-[10] absolute top-0 left-[50px]" />
     </div>

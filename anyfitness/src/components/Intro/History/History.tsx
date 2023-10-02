@@ -3,7 +3,7 @@ import SectionTitle from '../SectionTitle/SectionTitle';
 export default function History() {
   return (
     <section className="w-screen xl:h-[950px] h-auto flex justify-center items-center bg-theme-G1">
-      <div className="flex xl:w-[900px] w-full h-full xl:p-0 xl:pt-[80px] py-[40px] px-[24px] xl:flex-row flex-col xl:justify-between xl:gap-[0] gap-[20px]">
+      <div className="flex xl:w-[800px] w-full h-full xl:p-0 xl:pt-[80px] py-[40px] px-[24px] xl:flex-row flex-col xl:justify-between xl:gap-[0] gap-[20px]">
         <SectionTitle KorTitle="회사연혁" EngTitle="Company History" />
         <ul className="border-t-[2px] border-solid border-theme-G6 xl:w-[560px] w-full">
           {companyHistory.map(({ year, details }, idx) => (
