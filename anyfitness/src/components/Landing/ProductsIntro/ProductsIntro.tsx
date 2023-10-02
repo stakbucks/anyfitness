@@ -78,14 +78,14 @@ export default function ProductsIntro() {
   const handleOutdoorClick = () => setFilter('outdoor');
   return (
     <section className="w-screen xl:h-auto xl:py-[60px] flex justify-center  bg-theme-G1">
-      <div className="w-full sp:w-[1424px] xl:w-[916px] px-[24px] py-[40px] xl:p-0 h-auto min-h-[587px]">
-        <h2 className="text-theme-B sp:text-KOR-lg-H0 xl:text-KOR-lg-H1 text-KOR-sm-H2">
+      <div className="w-full sp:w-[1424px] xl:w-[916px] xl:px-[24px] px-0 py-[40px] xl:p-0 h-auto min-h-[587px]">
+        <h2 className="xl:px-0 px-[24px] text-theme-B sp:text-KOR-lg-H0 xl:text-KOR-lg-H1 text-KOR-sm-H2">
           제품소개
         </h2>
-        <p className="sp:mt-[12px] mt-[8px] text-theme-G5 sp:text-KOR-lg-H3 xl:text-KOR-lg-H5 text-KOR-sm-B2">
+        <p className="xl:px-0 px-[24px] sp:mt-[12px] mt-[8px] text-theme-G5 sp:text-KOR-lg-H3 xl:text-KOR-lg-H5 text-KOR-sm-B2">
           {DESCRIPTION_TEXT}
         </p>
-        <ul className="flex gap-[12px] sp:mt-[28px] xl:mt-[20px] mt-[16px]">
+        <ul className="xl:px-0 px-[24px] flex gap-[12px] sp:mt-[28px] xl:mt-[20px] mt-[16px]">
           <li>
             <FilterBtn
               onClick={handleCardioClick}
