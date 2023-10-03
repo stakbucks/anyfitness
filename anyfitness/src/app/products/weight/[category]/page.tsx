@@ -1,4 +1,9 @@
-import { IWeightCategories, IWeightCategories_KOR } from '@/interface/weight';
+import ProductCards from '@/components/Products/ProductCards/ProductCards';
+import {
+  ISimpleWeight,
+  IWeightCategories,
+  IWeightCategories_KOR,
+} from '@/interface/weight';
 
 type Props = {
   params: {
@@ -21,19 +26,20 @@ const getKorCategoryName: (
   }
 };
 
+const SERVER_URI = 'https://anyfitness.vercel.app';
+const TEST_URI = 'http://localhost:3000';
+
 export default async function WeightPage({ params: { category } }: Props) {
-  const products = await fetch(
-    `https://anyfitness.vercel.app/api/products/${getKorCategoryName(
-      category
-    )}`,
+  const products: ISimpleWeight[] = await fetch(
+    `${SERVER_URI}/api/products/${getKorCategoryName(category)}`,
     {
       cache: 'no-store',
     }
   ).then((res) => res.json());
   console.log(products);
   return (
-    <section className="w-screen  xl:h-[60px] h-[45px] bg-theme-W flex items-center xl:justify-center  ">
-      <div className="sp:w-[1424px] xl:w-[928px] w-screen xl:px-0 px-[24px] flex"></div>
+    <section className="w-full h-auto bg-theme-W flex items-center xl:justify-center  ">
+      <ProductCards products={products} />
     </section>
   );
 }
