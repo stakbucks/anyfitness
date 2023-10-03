@@ -23,7 +23,9 @@ const getKorCategoryName: (
 
 export default async function WeightPage({ params: { category } }: Props) {
   const products = await fetch(
-    `http://localhost:3000/api/products/${getKorCategoryName(category)}`,
+    `https://anyfitness.vercel.app/api/products/${getKorCategoryName(
+      category
+    )}`,
     {
       cache: 'no-store',
     }
