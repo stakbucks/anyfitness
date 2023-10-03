@@ -20,6 +20,7 @@ export default function Certificates({ page, certificates }: Props) {
     slider = document.getElementById('certificate-slider')!;
     slider.scrollLeft = (CAROUSEL_WIDTH + CERTIFICATE_GAP) * page!;
   }, [page, slider!]);
+
   return (
     <motion.div
       id="certificate-slider"

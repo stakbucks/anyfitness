@@ -32,6 +32,7 @@ export default function ProductsLayout({ children }: Props) {
 
       {/* 필터 메뉴 */}
       <Filter />
+
       {children}
     </div>
   );
