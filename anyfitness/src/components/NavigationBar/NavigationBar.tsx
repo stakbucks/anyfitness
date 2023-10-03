@@ -11,7 +11,7 @@ import Link from 'next/link';
 
 export default function NavigationBar() {
   return (
-    <header className="fixed top-0 left-0 flex w-[100vw] lg:h-[85px] h-[60px]  justify-center bg-theme-W z-[3]">
+    <header className=" fixed top-0 left-0 flex w-[100vw] lg:h-[85px] h-[60px]  justify-center bg-theme-W z-[3]">
       <nav className=" sp:w-[1424px] sp:mx-auto lg:w-[928px] lg:mx-[48px] mx-[24px] w-[100vw]  flex justify-between items-center">
         <Link className="z-[100]" href="/">
           <Image

@@ -8,11 +8,12 @@ import Path from './Path/Path';
 import { useCallback } from 'react';
 
 type Props = {
-  path: string;
+  path?: string;
+  className?: string;
 };
 
-export default function Paths({ path }: Props) {
-  const pathArr: string[] = ['HOME'];
+export default function Paths({ path, className }: Props) {
+  let pathArr: string[] = ['HOME'];
   const pathname = usePathname();
 
   const matchPathname = (pathname: string) => {
@@ -24,8 +25,13 @@ export default function Paths({ path }: Props) {
     }
   };
   matchPathname(pathname);
+  if (path) {
+    pathArr = path.split(', ');
+  }
   return (
-    <section className="w-screen  xl:h-[60px] h-[45px] bg-theme-W flex items-center xl:justify-center lg:mt-[85px] mt-[60px] border-y-[1px] border-solid border-theme-G2">
+    <section
+      className={` z-[3] w-screen  xl:h-[60px] h-[45px] bg-theme-W flex items-center xl:justify-center lg:mt-[85px] mt-[60px] border-y-[1px] border-solid border-theme-G2 ${className}`}
+    >
       <div className="sp:w-[1424px] xl:w-[928px] w-screen xl:px-0 px-[24px] flex">
         {pathArr.map((path, idx) => (
           <Path key={idx} path={path} isLast={idx === pathArr.length - 1} />
