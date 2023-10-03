@@ -9,15 +9,15 @@ type Props = {
 const categories = [
   {
     name: '근력운동기구',
-    link: '/weight/bts',
+    link: '/products/weight/bts',
   },
   {
     name: '유산소운동기구',
-    link: '/cardio/home',
+    link: '/products/cardio/home',
   },
   {
     name: '야외운동기구',
-    link: '/outdoor/400',
+    link: '/products/outdoor/400',
   },
 ];
 

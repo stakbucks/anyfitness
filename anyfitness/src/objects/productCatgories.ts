@@ -26,7 +26,7 @@ export const categories: ICategory[] = [
       },
       {
         name: '장애인용 A시리즈',
-        link: '/products/weight/disabled',
+        link: '/products/weight/aseries',
       },
     ],
   },
