@@ -9,6 +9,7 @@ export default function Banner() {
       <Image
         alt="배너"
         src={LandingBanner}
+        priority
         fill
         className="object-cover w-[100vw] h-full z-0 "
       />
@@ -17,6 +18,7 @@ export default function Banner() {
         width={258}
         height={81}
         src={LetterGroup}
+        priority
         className=" z-0 lg:w-[258px] lg:h-[81px] lg:scale-100 scale-75 mb-[20px]"
       />
       <DiscoverWhiteBtn to="/intro" className="z-0" />
