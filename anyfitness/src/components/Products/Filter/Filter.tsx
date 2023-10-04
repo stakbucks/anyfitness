@@ -34,11 +34,11 @@ export default function Filter() {
       />
       <div
         id="filter"
-        className={`w-screen xl:h-[70px] h-[62px] bg-theme-W flex items-end xl:justify-center  border-y-[1px] border-solid border-theme-G2 ${
+        className={`w-screen   xl:h-[70px] h-[62px] bg-theme-W flex items-end xl:justify-center  border-y-[1px] border-solid border-theme-G2 ${
           fixed && 'fixed lg:top-[85px] top-[60px] z-[3]'
         }`}
       >
-        <ul className="sp:w-[1424px] xl:w-[928px]  w-screen xl:px-0 px-[24px] flex md:justify-start justify-around md:gap-[26px] ">
+        <ul className="sp:w-[1424px] xl:w-[928px]  w-screen xl:px-0 px-[24px] flex md:justify-start justify-around md:gap-[26px]">
           {productsFilter.map((item: IFilterItem, idx) => (
             <FilterItem
               key={idx}

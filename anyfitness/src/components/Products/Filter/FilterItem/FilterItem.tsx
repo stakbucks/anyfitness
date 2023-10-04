@@ -11,7 +11,7 @@ export default function FilterItem({ item, isSelected }: Props) {
   return (
     <Link href={link}>
       <li
-        className={`w-auto h-[50px] pt-[16px] text-theme-B xl:text-KOR-lg-B5 text-KOR-sm-B4 ${
+        className={`whitespace-nowrap w-auto h-[50px] pt-[16px] text-theme-B xl:text-KOR-lg-B5 text-KOR-sm-B4 ${
           isSelected && 'border-b-[4px] border-solid border-theme-B'
         }`}
       >
