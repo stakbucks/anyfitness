@@ -2,6 +2,7 @@ import ProductCards from '@/components/Products/ProductCards/ProductCards';
 import { ISimpleProduct } from '@/interface/product';
 import { IWeightCategories } from '@/interface/weight';
 import { getSanityCategoryName } from '@/utils/getSanityCategoryName';
+import { Suspense } from 'react';
 
 type Props = {
   params: {
@@ -29,7 +30,9 @@ export default async function WeightPage({ params: { slug } }: Props) {
   ).then((res) => res.json());
   return (
     <section className="w-full h-auto bg-theme-W flex items-center xl:justify-center  ">
-      <ProductCards products={products} />
+      <Suspense fallback={<div>testing</div>}>
+        <ProductCards products={products} />
+      </Suspense>
     </section>
   );
 }

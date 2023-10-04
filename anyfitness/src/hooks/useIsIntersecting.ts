@@ -19,7 +19,7 @@ export default function useIsIntersecting<T extends HTMLElement>(
     const el: Element = ref.current!;
 
     observer.observe(el);
-  }, [ref]);
+  }, [ref, setIsIntersecting]);
 
   return isIntersecting;
 }
