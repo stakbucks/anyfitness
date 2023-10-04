@@ -4,27 +4,12 @@ import { IFilterItem, productsFilter } from '@/objects/productsFilter';
 import FilterItem from './FilterItem/FilterItem';
 import { usePathname } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
+import useIsIntersecting from '@/hooks/useIsIntersecting';
 
 export default function Filter() {
   const pathname = usePathname();
-  const [fixed, setFixed] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        console.log(entry);
-        // 관찰 대상이 viewport 안에 들어온 경우 'active' 클래스 추가
-        if (entry.isIntersecting) {
-          setFixed(false);
-        } else {
-          setFixed(true);
-        }
-        // 그 외의 경우 'active' 클래스 제거
-      });
-    }, {});
-    const el: Element = ref.current!;
-    io.observe(el);
-  }, []);
+  const fixed = useIsIntersecting<HTMLDivElement>(ref);
 
   return (
     <>
