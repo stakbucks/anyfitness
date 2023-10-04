@@ -14,14 +14,14 @@ export interface IProductSpecification {
   size: string; // SIZE(mm) (규격)
   block_deviceWeight: string; // 블럭무게/기기중량
   frame: string; //프레임
-  targetMuscles: string; // 단련근육
-  targetBodyParts: string;
-  targetBodyPartsArr: string[];
-  features: string[]; // (제품)특징
+  targetMuscles: string; // 단련근육 // .
+  targetBodyParts: string; // .
+  targetBodyPartsArr: string[]; // .
+  features: string[]; // (제품)특징 .
   // 유산소
   sizeArr: string[]; // 규격
   motor: string; // 모터
-  maxWeight: string; // 최대하중
+  maxWieght: string; // 최대하중
   displayInfo: string; // 디스플레이정보
   incline: string; // 경사도
   runningArea: string; // 주행면적

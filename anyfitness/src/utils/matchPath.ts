@@ -23,3 +23,16 @@ pathMap
 export function matchPath(path: string): string {
   return pathMap.get(path);
 }
+
+export function convertProductTypeToPath(type: string): string {
+  if (type === 'weightEq') {
+    return '근력운동기구';
+  }
+  if (type === 'cardio') {
+    return '유산소운동기구';
+  }
+  if (type === 'outdoor') {
+    return '야외운동기구';
+  }
+  return '';
+}

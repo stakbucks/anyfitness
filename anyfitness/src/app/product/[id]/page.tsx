@@ -1,5 +1,9 @@
+import Footer from '@/components/Footer/Footer';
 import Paths from '@/components/Paths/Paths';
-import { IDetailProduct, ISimpleProduct } from '@/interface/product';
+import ProductImage from '@/components/Product/ProductImage/ProductImage';
+import Specification from '@/components/Product/Specification/Specification';
+import { IDetailProduct } from '@/interface/product';
+import { convertProductTypeToPath } from '@/utils/matchPath';
 
 type Props = {
   params: {
@@ -8,20 +12,6 @@ type Props = {
 };
 
 const SERVER_URI = 'https://anyfitness.vercel.app';
-const TEST_URI = 'http://localhost:3000';
-
-function convertProductTypeToPath(type: string): string {
-  if (type === 'weightEq') {
-    return '근력운동기구';
-  }
-  if (type === 'cardio') {
-    return '유산소운동기구';
-  }
-  if (type === 'outdoor') {
-    return '야외운동기구';
-  }
-  return '';
-}
 
 export default async function ProductPage({ params: { id } }: Props) {
   // 제품 상세 정보 불러오고
@@ -32,14 +22,22 @@ export default async function ProductPage({ params: { id } }: Props) {
       cache: 'no-store',
     }
   ).then((res) => res.json());
-
-  const { type, Category } = product;
+  console.log(product.specification);
+  const { name, type, Category, image, specification } = product;
 
   return (
-    <div className="xl:mt-[85px] mt-[60px]">
+    <>
       <Paths
         path={`HOME, 제품소개, ${convertProductTypeToPath(type)}, ${Category}`}
       />
-    </div>
+      <div className=" w-screen h-auto flex flex-col items-center">
+        <section className="h-auto sp:w-[1424px] xl:w-[928px] w-screen xl:py-[40px] xl:px-0 py-[20px] px-[24px] flex xl:flex-row flex-col xl:justify-between xl:gap-auto gap-[20px]">
+          <ProductImage image={image} />
+          <Specification name={name} specification={specification} />
+        </section>
+
+        <Footer />
+      </div>
+    </>
   );
 }
