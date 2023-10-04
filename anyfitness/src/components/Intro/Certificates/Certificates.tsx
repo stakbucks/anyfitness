@@ -1,7 +1,6 @@
 import SectionTitle from '../SectionTitle/SectionTitle';
 
 import { ICertificate } from '@/interface/certificate';
-import Slider from '../Slider/Slider';
 import { BASE_URL } from '../Facilities/Facilities';
 import CarouselLayout from '@/components/Carousel/CarouselLayout';
 import CertificatesContainer from './CertificatesContainer/CertificatesContainer';
