@@ -6,10 +6,10 @@ const projection = `
 "id":_id,
 `;
 
-export async function getProductsByCategory(category: string) {
+export async function getProductsByCategory(type: string, category: string) {
   try {
     const data = await client.fetch(
-      `*[_type == "weightEq" && Category == "${category}"]{${projection}}`
+      `*[_type == "${type}" && Category == "${category}"]{${projection}}`
     );
     return convertProducts(data);
   } catch (err) {

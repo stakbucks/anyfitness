@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect, RefObject } from 'react';
+import { useState, useEffect, RefObject } from 'react';
 
 export default function useIsIntersecting<T extends HTMLElement>(
   ref: RefObject<T>

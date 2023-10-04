@@ -3,17 +3,14 @@ import { NextResponse } from 'next/server';
 
 type Props = {
   params: {
-    category: string;
+    slug: [type: string, category: string];
   };
 };
 
-export async function GET(
-  request: Request,
-  { params }: { params: { category: string } }
-) {
+export async function GET(request: Request, { params: { slug } }: Props) {
+  const [type, category] = slug;
   try {
-    const data = await getProductsByCategory(params.category);
-    console.log(data);
+    const data = await getProductsByCategory(type, category);
     return NextResponse.json(data);
   } catch (err) {
     console.log(err);
