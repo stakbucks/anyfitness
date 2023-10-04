@@ -19,17 +19,17 @@ const convertType = (type: string) => {
 
 export default async function WeightPage({ params: { slug } }: Props) {
   const [type, category] = slug;
-  // const products: ISimpleProduct[] = await fetch(
-  //   `${SERVER_URI}/api/products/${convertType(type)}/${getSanityCategoryName(
-  //     category
-  //   )}`,
-  //   {
-  //     cache: 'no-store',
-  //   }
-  // ).then((res) => res.json());
+  const products: ISimpleProduct[] = await fetch(
+    `${SERVER_URI}/api/products/${convertType(type)}/${getSanityCategoryName(
+      category
+    )}`,
+    {
+      cache: 'no-store',
+    }
+  ).then((res) => res.json());
   return (
     <section className="w-full h-auto bg-theme-W flex items-center xl:justify-center  ">
-      {/* <ProductCards products={products} /> */}
+      <ProductCards products={products} />
     </section>
   );
 }
