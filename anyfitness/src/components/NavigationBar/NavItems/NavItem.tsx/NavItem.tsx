@@ -2,7 +2,6 @@
 
 import Link from 'next/link';
 import useHovered from '@/hooks/useHovered';
-import ProductDropdown from './ProductsDropdown/ProductsDropdown';
 import { Dispatch, SetStateAction, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import { INavItem } from '@/objects/navItems';
