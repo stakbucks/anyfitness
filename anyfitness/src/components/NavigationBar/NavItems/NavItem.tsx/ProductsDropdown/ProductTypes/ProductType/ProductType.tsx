@@ -1,12 +1,12 @@
-import { ICategory } from '@/objects/productCatgories';
+import { IProductType } from '@/objects/productType';
 import Link from 'next/link';
 
 type Props = {
-  category: ICategory;
+  productType: IProductType;
   isLast: boolean;
 };
-export default function Category({ category, isLast }: Props) {
-  const { category: categoryName, items } = category;
+export default function ProductType({ productType, isLast }: Props) {
+  const { type: categoryName, category } = productType;
   return (
     <div
       className={`w-[148px] h-[160px] flex flex-col gap-[8px] ${
@@ -14,7 +14,7 @@ export default function Category({ category, isLast }: Props) {
       } `}
     >
       <h3 className="text-KOR-lg-B3 text-theme-BLUE">{categoryName}</h3>
-      {items.map(({ name, link }, idx) => (
+      {category.map(({ name, link }, idx) => (
         <Link
           href={link}
           className="z-[50] text-KOR-lg-B4 text-theme-B"

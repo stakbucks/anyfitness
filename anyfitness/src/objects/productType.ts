@@ -1,17 +1,17 @@
 // 네비바 '제품소개' 호버시 등장하는 드롭다운 카테고리
 
-export type ICategory = {
-  category: string;
-  items: {
+export type IProductType = {
+  type: string;
+  category: {
     name: string;
     link: string;
   }[];
 };
 
-export const categories: ICategory[] = [
+export const productTypes: IProductType[] = [
   {
-    category: '근력운동기구',
-    items: [
+    type: '근력운동기구',
+    category: [
       {
         name: 'BTS시리즈',
         link: '/products/weight/bts',
@@ -31,8 +31,8 @@ export const categories: ICategory[] = [
     ],
   },
   {
-    category: '유산소운동기구',
-    items: [
+    type: '유산소운동기구',
+    category: [
       {
         name: '가정용 런닝머신',
         link: '/products/cardio/home',
@@ -48,8 +48,8 @@ export const categories: ICategory[] = [
     ],
   },
   {
-    category: '야외운동기구',
-    items: [
+    type: '야외운동기구',
+    category: [
       {
         name: '400 series',
         link: '/products/outdoor/400',
