@@ -3,14 +3,13 @@
 // 카드의 높이와 이미지 크기는 1024 기점(xl)으로 한 번만 바뀌고
 // 카드 내 양쪽 마진만 바뀐다
 
-import { ISimpleWeight } from '@/interface/weight';
 import Image from 'next/image';
 import Test from '../../../../../public/test2.png';
 import Link from 'next/link';
+import { ISimpleProduct } from '@/interface/product';
 
 type Props = {
-  product: ISimpleWeight;
-  category: string;
+  product: ISimpleProduct;
 };
 
 const dynamicSizes = {
