@@ -12,14 +12,14 @@ type Props = {
 };
 
 const dynamicSizes = {
-  sp: `sp:w-[1424px] sp:grid-cols-4 sp:gap-[16px] `,
-  xl: `xl:w-[928px] xl:grid-cols-3 xl:gap-[16px] xl:pt-[40px] `,
+  sp: `sp:w-[1424px] sp:grid-cols-4  `,
+  xl: `xl:w-[928px] xl:grid-cols-3 xl:gap-x-[16px] xl:pt-[40px] xl:gap-y-[28px]`,
 };
 
 export default function ProductCards({ products }: Props) {
   return (
     <ul
-      className={`${dynamicSizes.sp} ${dynamicSizes.xl} w-screen grid grid-cols-2 gap-[4px] pt-[20px] mb-[100px]`}
+      className={`${dynamicSizes.sp} ${dynamicSizes.xl} w-screen grid grid-cols-2 gap-x-[4px] gap-y-[20px] pt-[20px] mb-[100px]`}
     >
       {products.map((product) => (
         <ProductCard key={product.id} product={product} />
