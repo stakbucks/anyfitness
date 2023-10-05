@@ -15,8 +15,11 @@ export default function DetailListedSpec({ spec, name }: Props) {
           <div className="w-full h-[2px] bg-theme-G2 my-[20px]" />
 
           <ul className="flex flex-col gap-[8px]">
-            {spec.map((v) => (
-              <li className="text-theme-G6 xl:text-KOR-lg-H5 text-KOR-sm-C2">
+            {spec.map((v, i) => (
+              <li
+                key={i}
+                className="text-theme-G6 xl:text-KOR-lg-H5 text-KOR-sm-C2"
+              >
                 · {v.replaceAll('-', '')}
               </li>
             ))}

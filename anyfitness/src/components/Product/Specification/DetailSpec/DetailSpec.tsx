@@ -14,8 +14,8 @@ export default function DetailSpec({ spec, name }: Props) {
           <p>{name}</p>
           <div className="w-auto max-w-[280px] flex flex-col items-end text-right ">
             {specArr
-              ? specArr.map((spec) => (
-                  <p className="flex flex-col ">
+              ? specArr.map((spec, i) => (
+                  <p key={i} className="flex flex-col ">
                     {spec.split('-').map((line) => (
                       <span>{line}</span>
                     ))}
