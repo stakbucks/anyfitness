@@ -14,10 +14,10 @@ export interface IProductSpecification {
   size: string; // SIZE(mm) (규격)
   block_deviceWeight: string; // 블럭무게/기기중량
   frame: string; //프레임
-  targetMuscles: string; // 단련근육 // .
-  targetBodyParts: string; // .
-  targetBodyPartsArr: string[]; // .
-  features: string[]; // (제품)특징 .
+  targetMuscles: string; // 단련근육 // . -> 사진
+  targetBodyParts: string; //
+  targetBodyPartsArr: string[]; // . -> 사진
+  features: string[]; // (제품)특징 . -> 하단 1
   // 유산소
   sizeArr: string[]; // 규격
   motor: string; // 모터
@@ -35,8 +35,8 @@ export interface IProductSpecification {
   maxWeightOfMan: string; // 허용몸무게
   // 야외
   age: string; // 사용연령
-  method: string; // 사용방법
-  effects: string[]; // 운동효과
+  method: string[]; // 사용방법 ->하단2
+  effects: string[]; // 운동효과 ->하단3
 }
 
 // 제품 상세 페이지 api 인터페이스
