@@ -29,8 +29,8 @@ export default function TargetBodyParts({
         </div>
       ) : (
         <div className="w-full grid grid-cols-2 gap-[4px]">
-          {targetBodyPartsArr?.map((targetBodyPart) => (
-            <div className="relative w-[155px] h-[140px]">
+          {targetBodyPartsArr?.map((targetBodyPart, i) => (
+            <div key={i} className="relative w-[155px] h-[140px]">
               <Image priority alt="단련부위" src={targetBodyPart} fill />
             </div>
           ))}

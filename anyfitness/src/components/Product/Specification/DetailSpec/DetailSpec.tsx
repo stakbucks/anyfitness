@@ -16,8 +16,8 @@ export default function DetailSpec({ spec, name }: Props) {
             {specArr
               ? specArr.map((spec, i) => (
                   <p key={i} className="flex flex-col ">
-                    {spec.split('-').map((line) => (
-                      <span>{line}</span>
+                    {spec.split('-').map((line, i2) => (
+                      <span key={i2}>{line}</span>
                     ))}
                   </p>
                 ))
