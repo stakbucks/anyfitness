@@ -29,6 +29,7 @@ export default function Specification({ name, specification }: Props) {
             spec={specification.block_deviceWeight}
             name="블럭무게/기기중량"
           />
+          <DetailSpec spec={specification.targetMuscles} name="단련근육" />
           <DetailSpec spec={specification.frame} name="프레임" />
           <DetailSpec spec={specification.motor} name="모터" />
           <DetailSpec spec={specification.maxWieght} name="최대하중" />
