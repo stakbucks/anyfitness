@@ -18,6 +18,7 @@ export default function TargetBodyParts({
       {/* targetBodyParts가 존재하거나, targetBodyPartsArr일때는 중앙정렬
         아닌 경우는, 2열 grid 배치
        */}
+
       {targetBodyParts ? (
         <div className="relative w-[155px] h-[140px]">
           <Image priority alt="단련부위" src={targetBodyParts} fill />

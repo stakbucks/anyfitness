@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import GoShoppingBtn from '@/UI/Buttons/GoShoppingBtn';
 import { IProductSpecification } from '@/interface/product';
 import DetailSpec from './DetailSpec/DetailSpec';

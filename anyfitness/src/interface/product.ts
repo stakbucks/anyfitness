@@ -14,9 +14,9 @@ export interface IProductSpecification {
   size: string; // SIZE(mm) (규격)
   block_deviceWeight: string; // 블럭무게/기기중량
   frame: string; //프레임
-  targetMuscles: string; // 단련근육 // . -> 사진
+  targetMuscles: string; // 단련근육 //
   targetBodyParts: string; //
-  targetBodyPartsArr: string[]; // . -> 사진
+  targetBodyPartsArr: string[]; //
   features: string[]; // (제품)특징 . -> 하단 1
   // 유산소
   sizeArr: string[]; // 규격

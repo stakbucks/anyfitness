@@ -1,5 +1,6 @@
 import Footer from '@/components/Footer/Footer';
 import Paths from '@/components/Paths/Paths';
+import ListedSpec from '@/components/Product/ListedSpec/ListedSpec';
 import ProductImage from '@/components/Product/ProductImage/ProductImage';
 import Specification from '@/components/Product/Specification/Specification';
 import { IDetailProduct } from '@/interface/product';
@@ -22,7 +23,6 @@ export default async function ProductPage({ params: { id } }: Props) {
       cache: 'no-store',
     }
   ).then((res) => res.json());
-  console.log(product.specification);
   const { name, type, Category, image, specification } = product;
 
   return (
@@ -35,7 +35,11 @@ export default async function ProductPage({ params: { id } }: Props) {
           <ProductImage image={image} />
           <Specification name={name} specification={specification} />
         </section>
-
+        <ListedSpec
+          features={specification.features}
+          method={specification.method}
+          effects={specification.effects}
+        />
         <Footer />
       </div>
     </>
