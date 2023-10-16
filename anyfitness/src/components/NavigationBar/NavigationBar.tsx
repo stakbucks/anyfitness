@@ -19,6 +19,7 @@ export default function NavigationBar() {
             src={Logo}
             width={152}
             height={56}
+            priority
             className="lg:w-[152px] lg:h-[56px] w-[99px] h-[36px]"
           />
         </Link>
