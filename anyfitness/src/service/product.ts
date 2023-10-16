@@ -16,7 +16,6 @@ export async function getProductById(id: string) {
   try {
     const data = await client.fetch(`*[_id == "${id}"]{${projection}}`);
     return convertProduct(data[0]);
-    return data[0];
   } catch (err) {
     console.log(err);
   }

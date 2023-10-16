@@ -1,10 +1,9 @@
 import Footer from '@/components/Footer/Footer';
 import LandingBanner from '../../../public/landing/landingBanner.png';
 import Image from 'next/image';
-import Path from '@/components/Paths/Path/Path';
 import Docs from '@/components/Docs/Docs';
 
-export default async function DocsPage() {
+export default function DocsPage() {
   return (
     <div className="w-screen h-auto lg:pt-[85px] pt-[60px] flex flex-col items-center">
       <div className="xl:w-[1920px] lg:w-[1024px] md:w-[768px] w-[390px] lg:h-[300px] h-[240px] relative flex flex-col  justify-center items-center">
