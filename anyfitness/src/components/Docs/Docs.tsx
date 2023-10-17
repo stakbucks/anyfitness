@@ -1,4 +1,3 @@
-import DownloadIcon from '@/UI/Icons/DownloadIcon';
 import { DocTypes, IDoc, IDocs } from '@/interface/doc';
 import Doc from './Doc/Doc';
 
@@ -7,7 +6,7 @@ const TEST_URI = 'http://localhost:3000/api';
 
 export default async function Docs() {
   const { catalog, guide }: IDocs = await fetch(`${SERVER_URI}/docs`, {
-    cache: 'no-store',
+    cache: 'no-cache',
   })
     .then((res) => res.json())
     .then((data: IDoc[]) => {
