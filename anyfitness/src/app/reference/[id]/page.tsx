@@ -1,14 +1,19 @@
+import { IDetailReference } from '@/interface/references';
+
 type Props = {
   params: {
     id: string;
   };
 };
 
-const TEST_URI = 'http://localhost:3000/api';
+const SERVER_URI = 'https://anyfitness.vercel.app/api';
 
 export default async function ReferencesPage({ params: { id } }: Props) {
-  //   const reference = await fetch(`${TEST_URI}/reference/${id}`, {
-  //     cache: 'no-store',
-  //   }).then((res) => res.json());
+  const reference: IDetailReference = await fetch(
+    `${SERVER_URI}/reference/${id}`,
+    {
+      cache: 'no-store',
+    }
+  ).then((res) => res.json());
   return <></>;
 }
