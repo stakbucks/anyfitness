@@ -130,6 +130,13 @@ const config: Config = {
           fontWeight: 300,
         },
       ],
+      'KOR-lg-C2': [
+        '14px',
+        {
+          lineHeight: '1.4',
+          fontWeight: 600,
+        },
+      ],
       'ENG-lg-H0': [
         '56px',
         {

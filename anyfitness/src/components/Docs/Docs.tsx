@@ -1,9 +1,12 @@
+import DownloadIcon from '@/UI/Icons/DownloadIcon';
 import { DocTypes, IDoc, IDocs } from '@/interface/doc';
+import Doc from './Doc/Doc';
 
 const SERVER_URI = 'https://anyfitness.vercel.app/api';
+const TEST_URI = 'http://localhost:3000/api';
 
 export default async function Docs() {
-  const docs: IDocs = await fetch(`${SERVER_URI}/docs`, {
+  const { catalog, guide }: IDocs = await fetch(`${SERVER_URI}/docs`, {
     cache: 'no-store',
   })
     .then((res) => res.json())
@@ -16,18 +19,23 @@ export default async function Docs() {
       });
       return result;
     });
-  console.log(docs);
+
   return (
-    <section className="sp:w-[1424px] xl:w-[928px] w-screen xl:px-0 px-[48px]">
+    <section className="text-theme-B sp:w-[1424px] xl:w-[928px] w-screen xl:px-0 px-[24px] mb-[80px]">
       <div className="w-full flex flex-col gap-[20px] mt-[40px]">
-        <h3 className="text-theme-B xl:text-KOR-lg-H1 text-KOR-sm-H3">
-          카다로그
+        <h3 className=" xl:text-KOR-lg-H1 text-KOR-sm-H3">카다로그</h3>
+        <div className="border-t-[2px] border-solid border-theme-B ">
+          {catalog.map((doc) => (
+            <Doc key={doc.id} doc={doc} />
+          ))}
+        </div>
+        <h3 className="mt-[40px] xl:text-KOR-lg-H1 text-KOR-sm-H3">
+          사용설명서
         </h3>
         <div className="border-t-[2px] border-solid border-theme-B ">
-          <div className="px-[16px] py-[32px] w-full flex items-center justify-between xl:text-KOR-lg-B5">
-            <p>예시 체크중 (Example Checking)</p>
-            <a>다운로드</a>
-          </div>
+          {guide.map((doc) => (
+            <Doc key={doc.id} doc={doc} />
+          ))}
         </div>
       </div>
     </section>

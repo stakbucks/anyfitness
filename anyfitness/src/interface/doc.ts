@@ -1,6 +1,6 @@
 export enum DocTypes {
   CATALOG = '카다로그',
-  GUIDE = '가이드',
+  GUIDE = '사용설명서',
 }
 
 export interface IDoc {
