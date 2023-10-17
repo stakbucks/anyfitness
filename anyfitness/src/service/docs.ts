@@ -1,4 +1,4 @@
-import { DocTypes, IDoc, IDocs } from '@/interface/doc';
+import { IDoc } from '@/interface/doc';
 import { client } from './sanity';
 
 const projection = `

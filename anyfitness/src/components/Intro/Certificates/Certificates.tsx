@@ -4,7 +4,6 @@ import { ICertificate } from '@/interface/certificate';
 import { BASE_URL } from '../Facilities/Facilities';
 import CarouselLayout from '@/components/Carousel/CarouselLayout';
 import CertificatesContainer from './CertificatesContainer/CertificatesContainer';
-import CertificateItem from './CertificatesContainer/CertificateItem/CertificateItem';
 
 export default async function Certificates() {
   const certificates: ICertificate[] = await fetch(

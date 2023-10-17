@@ -1,28 +1,26 @@
 import Footer from '@/components/Footer/Footer';
 import LandingBanner from '../../../public/landing/landingBanner.png';
 import Image from 'next/image';
-import Docs from '@/components/Docs/Docs';
 import Doc from '@/components/Docs/Doc/Doc';
 import { IDocs, IDoc, DocTypes } from '@/interface/doc';
 
-export const dynamic = 'force-dynamic';
+const SERVER_URI = 'https://anyfitness.vercel.app';
+const TEST_URI = 'http://localhost:3000/api';
 
-const SERVER_URI = 'https://anyfitness.vercel.app/api';
+export const revalidate = 0;
 
 export default async function DocsPage() {
-  // const { catalog, guide }: IDocs = await fetch(`${SERVER_URI}/documents`, {
-  //   cache: 'no-cache',
-  // })
-  //   .then((res) => res.json())
-  //   .then((data: IDoc[]) => {
-  //     const result: IDocs = { catalog: [], guide: [] };
-  //     data.forEach((doc: IDoc) => {
-  //       doc.type === DocTypes.CATALOG
-  //         ? result.catalog.push(doc)
-  //         : result.guide.push(doc);
-  //     });
-  //     return result;
-  //   });
+  const { catalog, guide }: IDocs = await fetch(`${SERVER_URI}/api/documents`)
+    .then((res) => res.json())
+    .then((data: IDoc[]) => {
+      const result: IDocs = { catalog: [], guide: [] };
+      data.forEach((doc: IDoc) => {
+        doc.type === DocTypes.CATALOG
+          ? result.catalog.push(doc)
+          : result.guide.push(doc);
+      });
+      return result;
+    });
   return (
     <div className="w-screen h-auto lg:pt-[85px] pt-[60px] flex flex-col items-center">
       <div className="xl:w-[1920px] lg:w-[1024px] md:w-[768px] w-[390px] lg:h-[300px] h-[240px] relative flex flex-col  justify-center items-center">
@@ -50,7 +48,7 @@ export default async function DocsPage() {
           </div>
         </div>
       </div>
-      {/* <section className="text-theme-B sp:w-[1424px] xl:w-[928px] w-screen xl:px-0 px-[24px] mb-[80px]">
+      <section className="text-theme-B sp:w-[1424px] xl:w-[928px] w-screen xl:px-0 px-[24px] mb-[80px]">
         <div className="w-full flex flex-col gap-[20px] mt-[40px]">
           <h3 className=" xl:text-KOR-lg-H1 text-KOR-sm-H3">카다로그</h3>
           <div className="border-t-[2px] border-solid border-theme-B ">
@@ -67,7 +65,7 @@ export default async function DocsPage() {
             ))}
           </div>
         </div>
-      </section> */}
+      </section>
       <Footer />
     </div>
   );
