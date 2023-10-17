@@ -7,7 +7,7 @@ const projection = `
 "url": file.asset->url
 `;
 
-export async function getDocs() {
+export async function getDocuments() {
   const data = await client.fetch(`*[_type == "docs"]{${projection}}`);
   return convertDocs(data);
 }

@@ -5,7 +5,7 @@ const SERVER_URI = 'https://anyfitness.vercel.app/api';
 const TEST_URI = 'http://localhost:3000/api';
 
 export default async function Docs() {
-  const { catalog, guide }: IDocs = await fetch(`${SERVER_URI}/docs`, {
+  const { catalog, guide }: IDocs = await fetch(`${SERVER_URI}/documents`, {
     cache: 'no-cache',
   })
     .then((res) => res.json())
