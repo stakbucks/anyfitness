@@ -5,6 +5,7 @@ import outdoor from './outdoor'
 import certificates from './certificates'
 import facilities from './facilities'
 import docs from './docs'
+import references from './references'
 
 export const schemaTypes = [
   weightEq,
@@ -14,4 +15,5 @@ export const schemaTypes = [
   certificates,
   facilities,
   docs,
+  references,
 ]
