@@ -1,10 +1,10 @@
-export type IFilterItem = {
+export type IProductFilterItem = {
   name: string;
   shortName: string;
   link: string;
 };
 
-export const productsFilter: IFilterItem[] = [
+export const productsFilter: IProductFilterItem[] = [
   {
     name: 'BTS시리즈',
     shortName: 'BTS',

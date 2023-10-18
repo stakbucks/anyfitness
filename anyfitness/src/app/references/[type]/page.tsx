@@ -2,6 +2,7 @@ import References from '@/components/References/References';
 import Banner from '../../../../public/references/referencesBanner.png';
 import Image from 'next/image';
 import { ReferenceTypes } from '@/interface/references';
+import Filter from '@/components/References/Filter/Filter';
 
 type Props = {
   params: {
@@ -11,7 +12,7 @@ type Props = {
 
 export default function ReferencesPage({ params: { type } }: Props) {
   return (
-    <div className="w-screen h-auto lg:pt-[85px] pt-[60px] flex flex-col items-center">
+    <div className="w-screen h-auto lg:pt-[85px] pt-[60px] flex flex-col items-center mb-[1000px]">
       <div className="xl:w-[1920px] lg:w-[1024px] md:w-[768px] w-[390px] lg:h-[300px] h-[240px] relative flex flex-col  justify-center items-center">
         <Image
           alt="배너"
@@ -37,6 +38,7 @@ export default function ReferencesPage({ params: { type } }: Props) {
           </div>
         </div>
       </div>
+      <Filter />
       <References type={type} />
     </div>
   );
