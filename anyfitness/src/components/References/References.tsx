@@ -8,13 +8,13 @@ type Props = {
 };
 
 export default async function References({ type }: Props) {
-  const references: ISimpleReference[] = await fetch(
-    `${TEST_URI}/references/${type}`,
-    {
-      cache: 'no-store',
-    }
-  ).then((res) => res.json());
-  console.log(references);
+  // const references: ISimpleReference[] = await fetch(
+  //   `${TEST_URI}/references/${type}`,
+  //   {
+  //     cache: 'no-store',
+  //   }
+  // ).then((res) => res.json());
+  // console.log(references);
 
   return (
     <section className="text-theme-B sp:w-[1424px] xl:w-[928px] w-screen xl:px-0 px-[24px] mb-[80px]"></section>
