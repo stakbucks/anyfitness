@@ -1,3 +1,9 @@
+export enum ReferenceTypes {
+  WEIGHT = 'weight',
+  OUTDOOR = 'outdoor',
+  EXHIBITION = 'exhibition',
+}
+
 export interface ISimpleReference {
   id: string;
   name: string;

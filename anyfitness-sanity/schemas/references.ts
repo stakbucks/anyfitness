@@ -9,6 +9,11 @@ export default {
       type: 'string',
     },
     {
+      title: '분류',
+      name: 'type',
+      type: 'string',
+    },
+    {
       name: 'images',
       type: 'array',
       of: [{type: 'image'}],

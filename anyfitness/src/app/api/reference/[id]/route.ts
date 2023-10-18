@@ -1,4 +1,4 @@
-import { getReferenceById, getReferences } from '@/service/references';
+import { getReferenceById } from '@/service/references';
 import { NextResponse } from 'next/server';
 
 export const dynamic = 'force-dynamic';

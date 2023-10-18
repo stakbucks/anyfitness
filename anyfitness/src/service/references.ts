@@ -7,8 +7,10 @@ const projection = `
 
 `;
 
-export async function getReferences() {
-  const data = await client.fetch(`*[_type == "references"]{${projection}}`);
+export async function getReferencesByType(type: string) {
+  const data = await client.fetch(
+    `*[_type == "references" && type == "${type}"]{${projection}}`
+  );
   return convertReferences(data);
 }
 

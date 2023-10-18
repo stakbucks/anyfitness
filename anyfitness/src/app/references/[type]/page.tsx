@@ -1,16 +1,15 @@
-import { ISimpleReference } from '@/interface/references';
-import Banner from '../../../public/references/referencesBanner.png';
+import References from '@/components/References/References';
+import Banner from '../../../../public/references/referencesBanner.png';
 import Image from 'next/image';
+import { ReferenceTypes } from '@/interface/references';
 
-const SERVER_URI = 'https://anyfitness.vercel.app/api';
+type Props = {
+  params: {
+    type: ReferenceTypes;
+  };
+};
 
-export default async function ReferencesPage() {
-  const references: ISimpleReference[] = await fetch(
-    `${SERVER_URI}/references`,
-    {
-      cache: 'no-store',
-    }
-  ).then((res) => res.json());
+export default function ReferencesPage({ params: { type } }: Props) {
   return (
     <div className="w-screen h-auto lg:pt-[85px] pt-[60px] flex flex-col items-center">
       <div className="xl:w-[1920px] lg:w-[1024px] md:w-[768px] w-[390px] lg:h-[300px] h-[240px] relative flex flex-col  justify-center items-center">
@@ -38,6 +37,7 @@ export default async function ReferencesPage() {
           </div>
         </div>
       </div>
+      <References type={type} />
     </div>
   );
 }
