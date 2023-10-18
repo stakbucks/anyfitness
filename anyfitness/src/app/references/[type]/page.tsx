@@ -12,7 +12,7 @@ type Props = {
 
 export default function ReferencesPage({ params: { type } }: Props) {
   return (
-    <div className="w-screen h-auto lg:pt-[85px] pt-[60px] flex flex-col items-center mb-[1000px]">
+    <div className="w-screen h-auto lg:pt-[85px] pt-[60px] flex flex-col items-center justify-center">
       <div className="xl:w-[1920px] lg:w-[1024px] md:w-[768px] w-[390px] lg:h-[300px] h-[240px] relative flex flex-col  justify-center items-center">
         <Image
           alt="배너"
