@@ -1,7 +1,6 @@
 'use client';
 
-import { IFilterItem } from '@/objects/productsFilter';
-import { productTypes } from '@/objects/productType';
+import { IFilterItem, productTypes } from '@/objects/productType';
 import FilterItem from './FilterItem/FilterItem';
 import { usePathname } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';

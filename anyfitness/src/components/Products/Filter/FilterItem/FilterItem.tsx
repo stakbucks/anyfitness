@@ -1,4 +1,4 @@
-import { IFilterItem } from '@/objects/productsFilter';
+import { IFilterItem } from '@/objects/productType';
 import Link from 'next/link';
 
 type Props = {

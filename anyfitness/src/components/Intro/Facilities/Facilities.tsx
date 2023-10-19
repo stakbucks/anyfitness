@@ -1,7 +1,9 @@
 import CarouselLayout from '@/components/Carousel/CarouselLayout';
 import SectionTitle from '../SectionTitle/SectionTitle';
 import FacilitiesContainer from './FacilitiesContainer/FacilitiesContainer';
+
 export const BASE_URL = 'https://anyfitness.vercel.app/';
+
 export default async function Facilities() {
   const facilities = await fetch(`${BASE_URL}/api/facilities`).then((res) =>
     res.json()

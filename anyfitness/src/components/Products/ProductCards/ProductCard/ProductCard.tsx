@@ -33,7 +33,7 @@ export default function ProductCard({ product }: Props) {
           <Image
             id="image-test"
             alt={name}
-            src={Test}
+            src={image}
             fill
             className="object-cover"
           />

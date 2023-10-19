@@ -11,6 +11,7 @@ type Props = {
 };
 
 const SERVER_URI = 'https://anyfitness.vercel.app';
+const TEST_URI = 'http://localhost:3000';
 
 const convertType = (type: string) => {
   if (type === 'weight') return 'weightEq';
@@ -20,7 +21,7 @@ const convertType = (type: string) => {
 export default async function WeightPage({ params: { slug } }: Props) {
   const [type, category] = slug;
   const products: ISimpleProduct[] = await fetch(
-    `${SERVER_URI}/api/products/${convertType(type)}/${getSanityCategoryName(
+    `${TEST_URI}/api/products/${convertType(type)}/${getSanityCategoryName(
       category
     )}`,
     {
