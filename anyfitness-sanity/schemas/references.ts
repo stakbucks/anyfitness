@@ -14,6 +14,11 @@ export default {
       type: 'string',
     },
     {
+      title: '날짜',
+      name: 'date',
+      type: 'date',
+    },
+    {
       name: 'images',
       type: 'array',
       of: [{type: 'image'}],
