@@ -5,7 +5,6 @@ import { usePathname } from 'next/navigation';
 // 1024 ~    => full screen + paddingx 24
 
 import Path from './Path/Path';
-import { useCallback } from 'react';
 
 type Props = {
   path?: string;
@@ -20,7 +19,7 @@ export default function Paths({ path, className }: Props) {
     if (pathname.includes('/products')) {
       pathArr.push('제품소개');
     }
-    if (pathname.includes('/weight')) {
+    if (pathname.includes('/products/weight')) {
       pathArr.push('근력운동기구');
     }
   };

@@ -6,6 +6,7 @@ export enum ReferenceTypes {
 
 export interface ISimpleReference {
   id: string;
+  type: ReferenceTypes;
   name: string;
   image: string;
 }
@@ -13,6 +14,7 @@ export interface ISimpleReference {
 export interface IDetailReference {
   id: string;
   name: string;
+  type: ReferenceTypes;
   date: string;
   images: string[];
 }

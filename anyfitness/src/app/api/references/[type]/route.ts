@@ -23,6 +23,5 @@ function convertTypeToKor(type: ReferenceTypes) {
 
 export async function GET(request: Request, { params: { type } }: Props) {
   const data = await getReferencesByType(convertTypeToKor(type));
-
   return NextResponse.json(data);
 }

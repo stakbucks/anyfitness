@@ -13,7 +13,6 @@ type Props = {
 };
 
 const SERVER_URI = 'https://anyfitness.vercel.app';
-const TEST_URI = 'http://localhost:3000';
 
 export default async function ProductPage({ params: { id } }: Props) {
   // 제품 상세 정보 불러오고

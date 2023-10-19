@@ -13,9 +13,9 @@ const dynamicSizes = {
 };
 
 export default function ReferenceItem({ reference }: Props) {
-  const { id, image, name } = reference;
+  const { id, image, name, type } = reference;
   return (
-    <Link href={`/refrence/${id}`}>
+    <Link href={`/reference/${type}/${id}`}>
       <li
         className={`place-self-center ${dynamicSizes.sp} ${dynamicSizes.xl} ${dynamicSizes.md} flex flex-col justify-between items-center w-full hover:scale-[1.02]`}
       >

@@ -3,21 +3,33 @@ import { client, urlFor } from './sanity';
 
 const projection = `
 ..., 
-"id":_id,
-
+"id":_id
 `;
 
 export async function getReferencesByType(type: string) {
   const data = await client.fetch(
     `*[_type == "references" && type == "${type}"]{${projection}}`
   );
+  console.log(data);
   return convertReferences(data);
 }
+
+const convertTypeToENG = (type: string) => {
+  switch (type) {
+    case '웨이트':
+      return 'weight';
+    case '야외기구':
+      return 'outdoor';
+    case '전시회':
+      return 'exhibition';
+  }
+};
 
 function convertReferences(references: IDetailReference[]) {
   return references.map((reference: IDetailReference) => ({
     id: reference.id,
     name: reference.name,
+    type: convertTypeToENG(reference.type),
     date: reference.date,
     image: urlFor(reference.images[0]),
   }));

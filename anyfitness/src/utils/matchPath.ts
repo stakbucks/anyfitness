@@ -18,7 +18,10 @@ pathMap
   .set('600 series', '/products/outdoor/600')
   .set('가정용 런닝머신', '/products/cardio/home')
   .set('클럽용 런닝머신', '/products/cardio/club')
-  .set('헬스 자전거', '/products/cardio/cycle');
+  .set('헬스 자전거', '/products/cardio/cycle')
+  .set('웨이트 납품사례', '/reference/weight')
+  .set('야외기구 납품사례', '/reference/outdoor')
+  .set('전시회', '/reference/exhibition');
 
 export function matchPath(path: string): string {
   return pathMap.get(path);
