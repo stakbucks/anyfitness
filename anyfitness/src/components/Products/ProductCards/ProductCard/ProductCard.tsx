@@ -22,14 +22,14 @@ export default function ProductCard({ product }: Props) {
   return (
     <Link href={`/product/${id}`}>
       <li
-        className={`${dynamicSizes.sp} ${dynamicSizes.xl} w-auto h-[298px] px-[20px] pt-[20px] bg-theme-IMGBG flex flex-col items-center`}
+        className={`${dynamicSizes.sp} ${dynamicSizes.xl} w-auto h-[298px] px-[20px] pt-[20px] bg-theme-IMGBG flex flex-col items-center hover:scale-[1.02]`}
       >
         <div className="w-full xl:h-[34px] pb-[12px] border-b border-solid border-theme-G2">
           <h3 className="text-theme-B xl:text-KOR-lg-H4 text-KOR-sm-B4">
             {name}
           </h3>
         </div>
-        <div className="relative bg-inherit xl:w-[224px] xl:h-[260px] w-[139px] h-[240px]">
+        <div className="relative bg-inherit w-full h-[240px]">
           <Image
             id="image-test"
             alt={name}

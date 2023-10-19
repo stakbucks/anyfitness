@@ -21,7 +21,7 @@ const convertType = (type: string) => {
 export default async function WeightPage({ params: { slug } }: Props) {
   const [type, category] = slug;
   const products: ISimpleProduct[] = await fetch(
-    `${TEST_URI}/api/products/${convertType(type)}/${getSanityCategoryName(
+    `${SERVER_URI}/api/products/${convertType(type)}/${getSanityCategoryName(
       category
     )}`,
     {

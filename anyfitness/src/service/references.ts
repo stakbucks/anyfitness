@@ -18,6 +18,7 @@ function convertReferences(references: IDetailReference[]) {
   return references.map((reference: IDetailReference) => ({
     id: reference.id,
     name: reference.name,
+    date: reference.date,
     image: urlFor(reference.images[0]),
   }));
 }
