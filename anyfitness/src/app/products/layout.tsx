@@ -12,7 +12,7 @@ type Props = {
 export default function ProductsLayout({ children }: Props) {
   return (
     <div className="w-screen h-auto relative ">
-      <Paths path="HOME, 제품소개, 근력운동기구" />
+      <Paths />
 
       {/* 배너 */}
       <div className="relative sp:w-[1920px] xl:w-[1520px] lg:w-[1024px]  w-screen flex flex-col items-center gap-[20px] xl:h-[240px] h-[195px]">

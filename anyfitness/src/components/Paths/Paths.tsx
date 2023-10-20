@@ -22,6 +22,12 @@ export default function Paths({ path, className }: Props) {
     if (pathname.includes('/products/weight')) {
       pathArr.push('근력운동기구');
     }
+    if (pathname.includes('/products/cardio')) {
+      pathArr.push('유산소운동기구');
+    }
+    if (pathname.includes('/products/outdoor')) {
+      pathArr.push('야외운동기구');
+    }
   };
   matchPathname(pathname);
   if (path) {
