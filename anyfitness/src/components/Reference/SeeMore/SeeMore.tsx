@@ -31,11 +31,14 @@ export default async function SeeMore({ id, type }: Props) {
           ...references.slice(currentIdx + 1, currentIdx + 3),
         ];
       // 다음글이 하나 밖에 없는 경우 (이전글 2 + 다음글 1)
-      else currentIdx + 1 === lastIdx;
-      return [
-        ...references.slice(currentIdx - 2, currentIdx),
-        references[lastIdx],
-      ];
+      if (currentIdx + 1 === lastIdx)
+        return [
+          ...references.slice(currentIdx - 2, currentIdx),
+          references[lastIdx],
+        ];
+      // 다음글이 없는 경우
+      if (currentIdx === lastIdx) return references.slice(-4, -1);
+      return [];
     });
   return (
     <section className="bg-theme-G1 w-screen  h-auto flex justify-center">
