@@ -9,6 +9,7 @@ type Props = {
 };
 
 export default function Specification({ name, specification }: Props) {
+  const { targetBodyParts, targetBodyPartsArr } = specification;
   return (
     <div className="xl:w-[390px] w-full h-auto flex flex-col">
       <h2 className="text-[#000000] xl:text-KOR-lg-H0 text-KOR-sm-H0">
@@ -50,10 +51,12 @@ export default function Specification({ name, specification }: Props) {
           <DetailSpec spec={specification.age} name="사용연령" />
         </ul>
       </div>
-      <TargetBodyParts
-        targetBodyParts={specification.targetBodyParts}
-        targetBodyPartsArr={specification.targetBodyPartsArr}
-      />
+      {(targetBodyParts || targetBodyPartsArr) && (
+        <TargetBodyParts
+          targetBodyParts={targetBodyParts}
+          targetBodyPartsArr={targetBodyPartsArr}
+        />
+      )}
     </div>
   );
 }

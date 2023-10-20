@@ -10,7 +10,6 @@ export async function getReferencesByType(type: string) {
   const data = await client.fetch(
     `*[_type == "references" && type == "${type}"]{${projection}}`
   );
-  console.log(data);
   return convertReferences(data);
 }
 
@@ -37,7 +36,6 @@ function convertReferences(references: IDetailReference[]) {
 
 export async function getReferenceById(id: string) {
   const data = await client.fetch(`*[_id == "${id}"][0]{${projection}}`);
-  console.log(data);
   return convertReference(data);
 }
 

@@ -1,4 +1,5 @@
 import { IProductSpecification } from '@/interface/product';
+import isNotEmpty from '@/utils/isNotEmpty';
 
 type Props = {
   spec: string | string[] | undefined;
@@ -7,6 +8,7 @@ type Props = {
 
 export default function DetailSpec({ spec, name }: Props) {
   const specArr = Array.isArray(spec) && spec;
+  if (specArr === false && !isNotEmpty(spec)) return;
   return (
     <>
       {spec && (
