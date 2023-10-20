@@ -1,7 +1,9 @@
 import Footer from '@/components/Footer/Footer';
+import Paths from '@/components/Paths/Paths';
 import Reference from '@/components/Reference/Reference';
 import SeeMore from '@/components/Reference/SeeMore/SeeMore';
 import { IDetailReference, ReferenceTypes } from '@/interface/references';
+import { convertProductTypeToPath } from '@/utils/matchPath';
 
 type Props = {
   params: {
@@ -21,7 +23,8 @@ export default async function ReferencesPage({ params: { slug } }: Props) {
   ).then((res) => res.json());
   return (
     <>
-      <div className="w-screen h-auto lg:pt-[85px] pt-[60px] flex flex-col items-center justify-center">
+      <Paths />
+      <div className="w-screen h-auto   flex flex-col items-center justify-center">
         <Reference reference={reference} />
       </div>
       <SeeMore id={reference.id} type={type} />

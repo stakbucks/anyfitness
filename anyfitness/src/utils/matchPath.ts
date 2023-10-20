@@ -1,6 +1,6 @@
 const pathMap = new Map();
 pathMap
-  .set('HOME', '/')
+  .set('Home', '/')
   .set('제품소개', '/products/weight/bts')
   .set('BTS시리즈', '/products/weight/bts')
   .set('DIAMOND시리즈', '/products/weight/diamond')
@@ -19,9 +19,13 @@ pathMap
   .set('가정용 런닝머신', '/products/cardio/home')
   .set('클럽용 런닝머신', '/products/cardio/club')
   .set('헬스 자전거', '/products/cardio/cycle')
-  .set('웨이트 납품사례', '/reference/weight')
-  .set('야외기구 납품사례', '/reference/outdoor')
-  .set('전시회', '/reference/exhibition');
+  .set('웨이트 납품사례', '/references/weight')
+  .set('야외기구 납품사례', '/references/outdoor')
+  .set('납품사례', '/references/weight')
+  .set('전시회', '/references/exhibition')
+  .set('weight', 'reference/weight')
+  .set('outdoor', 'reference/outdoor')
+  .set('exhibition', 'reference/exhibition');
 
 export function matchPath(path: string): string {
   return pathMap.get(path);

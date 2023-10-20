@@ -16,9 +16,7 @@ export default function IntroBanner() {
           회사 소개
         </h2>
         <div className="absolute xl:top-[36px] xl:top-[24px] top-[20px] xl:left-0 left-[24px] flex items-center">
-          <span
-            className={`text-theme-G3 lg:text-KOR-lg-H5 lg:text-KOR-sm-C2 `}
-          >
+          <span className={`text-theme-G3 lg:text-KOR-lg-H5 text-KOR-sm-C2 `}>
             Home
           </span>
           <div className="lg:w-[1.5px] w-[1px] lg:h-[18px] h-[14px] bg-theme-G3 mx-[12px]" />

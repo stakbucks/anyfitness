@@ -28,7 +28,7 @@ export default async function ProductPage({ params: { id } }: Props) {
   return (
     <>
       <Paths
-        path={`HOME, 제품소개, ${convertProductTypeToPath(type)}, ${Category}`}
+        path={`Home, 제품소개, ${convertProductTypeToPath(type)}, ${Category}`}
       />
       <div className=" w-screen h-auto flex flex-col items-center">
         <section className="h-auto sp:w-[1424px] xl:w-[928px] w-screen xl:py-[40px] xl:px-0 py-[20px] px-[24px] flex xl:flex-row flex-col xl:justify-between xl:gap-auto gap-[20px]">

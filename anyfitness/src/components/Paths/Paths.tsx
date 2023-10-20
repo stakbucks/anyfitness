@@ -12,12 +12,15 @@ type Props = {
 };
 
 export default function Paths({ path, className }: Props) {
-  let pathArr: string[] = ['HOME'];
+  let pathArr: string[] = ['Home'];
   const pathname = usePathname();
 
   const matchPathname = (pathname: string) => {
     if (pathname.includes('/products')) {
       pathArr.push('제품소개');
+    }
+    if (pathname.includes('/reference')) {
+      pathArr.push('납품사례');
     }
     if (pathname.includes('/products/weight')) {
       pathArr.push('근력운동기구');
@@ -27,6 +30,15 @@ export default function Paths({ path, className }: Props) {
     }
     if (pathname.includes('/products/outdoor')) {
       pathArr.push('야외운동기구');
+    }
+    if (pathname.includes('/reference/weight')) {
+      pathArr.push('웨이트 납품사례');
+    }
+    if (pathname.includes('/reference/outdoor')) {
+      pathArr.push('야외기구 납품사례');
+    }
+    if (pathname.includes('/reference/exhibition')) {
+      pathArr.push('전시회');
     }
   };
   matchPathname(pathname);
