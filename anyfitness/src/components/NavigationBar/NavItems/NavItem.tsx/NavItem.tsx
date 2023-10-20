@@ -19,18 +19,21 @@ export default function NavItem({
 }: Props) {
   const pathname = usePathname();
 
-  const { name, link } = item;
+  const { name, link, match } = item;
   const { isHovered, handleMouseEnter, handleMouseLeave } = useHovered();
+
   useEffect(() => {
     if (name === '제품소개' && isHovered) setIsProductHovered(true);
     else setIsProductHovered(false);
   }, [name, isHovered]);
+
   return (
     <li
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       className={`relative hover:text-theme-B z-[100] ${
-        (pathname.includes(link) || (dropdownOpen && name === '제품소개')) &&
+        ((match && pathname.includes(match)) ||
+          (dropdownOpen && name === '제품소개')) &&
         'text-theme-B'
       }`}
     >
@@ -43,7 +46,7 @@ export default function NavItem({
         <Link href={link}>{name}</Link>
       )}
       {(isHovered ||
-        pathname.includes(link) ||
+        (match && pathname.includes(match)) ||
         (dropdownOpen && name === '제품소개')) && (
         <div className="bg-theme-B h-[4px] w-full absolute top-[32px]" />
       )}
