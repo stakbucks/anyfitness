@@ -29,7 +29,7 @@ export default async function WeightPage({ params: { slug } }: Props) {
   ).then((res) => res.json());
   return (
     <section className="w-full h-auto bg-theme-W flex items-center xl:justify-center  ">
-      <Suspense fallback={<div>testing</div>}>
+      <Suspense fallback={<div></div>}>
         <ProductCards products={products} />
       </Suspense>
     </section>
