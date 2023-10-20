@@ -5,9 +5,6 @@ import Doc from '@/components/Docs/Doc/Doc';
 import { IDocs, IDoc, DocTypes } from '@/interface/doc';
 import Docs from '@/components/Docs/Docs';
 
-const SERVER_URI = 'https://anyfitness.vercel.app';
-const TEST_URI = 'http://localhost:3000/api';
-
 export default function DocsPage() {
   return (
     <div className="w-screen h-auto lg:pt-[85px] pt-[60px] flex flex-col items-center">

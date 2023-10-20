@@ -11,7 +11,6 @@ type Props = {
 };
 
 const SERVER_URI = 'https://anyfitness.vercel.app';
-const TEST_URI = 'http://localhost:3000';
 
 const convertType = (type: string) => {
   if (type === 'weight') return 'weightEq';

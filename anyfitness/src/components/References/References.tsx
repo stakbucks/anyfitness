@@ -2,7 +2,6 @@ import { ISimpleReference, ReferenceTypes } from '@/interface/references';
 import ReferenceItem from './RefrenceItem.tsx/ReferenceItem';
 
 const SERVER_URI = 'https://anyfitness.vercel.app/api';
-const TEST_URI = 'http://localhost:3000/api';
 
 type Props = {
   type: ReferenceTypes;
@@ -15,7 +14,7 @@ const dynamicSizes = {
 
 export default async function References({ type }: Props) {
   const references: ISimpleReference[] = await fetch(
-    `${TEST_URI}/references/${type}`,
+    `${SERVER_URI}/references/${type}`,
     {
       cache: 'no-store',
     }

@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import Test from '../../../../public/test.png';
 
 type Props = {
   image: string;
