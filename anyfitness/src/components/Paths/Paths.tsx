@@ -35,7 +35,7 @@ export default function Paths({ path, className }: Props) {
   }
   return (
     <section
-      className={` z-[3] w-screen  xl:h-[60px] h-[45px] bg-theme-W flex items-center xl:justify-center lg:mt-[85px] mt-[60px] border-t-[1px] border-solid border-theme-G2 ${className}`}
+      className={` z-[3] w-screen  xl:h-[60px] h-[45px] bg-theme-W flex items-center xl:justify-center lg:mt-[85px] mt-[60px] border-t-[1px] border-solid border-theme-G2 ${className} truncate`}
     >
       <div className="sp:w-[1424px] xl:w-[928px] w-screen xl:px-0 px-[24px] flex">
         {pathArr.map((path, idx) => (
