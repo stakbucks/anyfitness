@@ -52,7 +52,7 @@ export default async function SeeMore({ id, type }: Props) {
         <div className="w-full h-auto flex xl:gap-[16px] gap-[12px] xl:ml-0 mr-0 ml-[24px] overflow-x-auto scroll">
           {references.map(({ id, image, name, type }) => (
             <Link key={id} href={`/reference/${type}/${id}`}>
-              <div className="flex flex-col justify-between sp:min-w-[464px] xl:w-[298px] xl:h-[234px] min-w-[242px] h-[193px]">
+              <div className="flex flex-col justify-between items-center sp:min-w-[464px] xl:w-[298px] xl:h-[234px] min-w-[242px] h-[193px]">
                 <div className="relative w-full xl:h-[200px] h-[160px]">
                   <Image
                     alt="더 보기"
