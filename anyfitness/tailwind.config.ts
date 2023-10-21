@@ -35,6 +35,7 @@ const config: Config = {
       'theme-W': '#FFFFFF',
       'theme-IMGBG': '#F9F9F9',
       'theme-FOOTER': '#EFEFEF',
+      'theme-ModalBG': 'rgba(0,0,0,0.5)',
     },
 
     fontSize: {
