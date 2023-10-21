@@ -29,7 +29,7 @@ export default function ProductCard({ product }: Props) {
             {name}
           </h3>
         </div>
-        <div className="relative bg-inherit w-full h-[240px]">
+        <div className="relative bg-inherit w-full xl:h-[230px] xl:mt-[10px] h-[240px] mt-0">
           <Image
             id="image-test"
             alt={name}
