@@ -1,4 +1,6 @@
 import ProductCards from '@/components/Products/ProductCards/ProductCards';
+import { ICardioCategories } from '@/interface/cardio';
+import { IOutdoorCategories } from '@/interface/outdoor';
 import { ISimpleProduct } from '@/interface/product';
 import { IWeightCategories } from '@/interface/weight';
 import { getSanityCategoryName } from '@/utils/getSanityCategoryName';
@@ -34,18 +36,18 @@ export default async function WeightPage({ params: { slug } }: Props) {
 }
 
 export async function generateStaticParams() {
-  const weightSlugs = [
+  const weightSlugs: ['weight', IWeightCategories][] = [
     ['weight', 'bts'],
     ['weight', 'diamond'],
     ['weight', 'free'],
     ['weight', 'aseries'],
   ];
-  const cardioSlugs = [
+  const cardioSlugs: ['cardio', ICardioCategories][] = [
     ['cardio', 'home'],
     ['cardio', 'club'],
     ['cardio', 'cycle'],
   ];
-  const outdoorSlugs = [
+  const outdoorSlugs: ['outdoor', IOutdoorCategories][] = [
     ['outdoor', '400'],
     ['outdoor', '300'],
     ['outdoor', '200'],
