@@ -7,7 +7,6 @@ const projection = `
 `;
 
 export async function getReferencesByType(type: string) {
-  console.log(type);
   const data = await client.fetch(
     `*[_type == "references" && type == "${type}"]{${projection}}`,
     {},
@@ -18,7 +17,6 @@ export async function getReferencesByType(type: string) {
 
 export async function getMoreReferencesByType(type: string, id: string) {
   const references = await getReferencesByType(type);
-  console.log(references);
   const currentIdx = references.findIndex(
     (reference: ISimpleReference) => reference.id === id
   )!;
