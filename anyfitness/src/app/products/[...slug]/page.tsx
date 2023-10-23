@@ -22,10 +22,7 @@ export default async function WeightPage({ params: { slug } }: Props) {
   const products: ISimpleProduct[] = await fetch(
     `${SERVER_URI}/api/products/${convertType(type)}/${getSanityCategoryName(
       category
-    )}`,
-    {
-      cache: 'no-store',
-    }
+    )}`
   ).then((res) => res.json());
   return (
     <section className="w-full h-auto bg-theme-W flex items-center xl:justify-center  ">
@@ -34,4 +31,25 @@ export default async function WeightPage({ params: { slug } }: Props) {
       </Suspense>
     </section>
   );
+}
+
+export async function generateStaticParams() {
+  const weightSlugs = [
+    ['weight', 'bts'],
+    ['weight', 'diamond'],
+    ['weight', 'free'],
+    ['weight', 'aseries'],
+  ];
+  const cardioSlugs = [
+    ['cardio', 'home'],
+    ['cardio', 'club'],
+    ['cardio', 'cycle'],
+  ];
+  const outdoorSlugs = [
+    ['outdoor', '400'],
+    ['outdoor', '300'],
+    ['outdoor', '200'],
+    ['outdoor', '600'],
+  ];
+  return [...weightSlugs, ...cardioSlugs, ...outdoorSlugs];
 }

@@ -40,7 +40,7 @@ export default function FacilityItem({ facility }: Props) {
         <ModalPortal>
           <div
             onClick={handleModalClick}
-            className="fixed left-0 top-0 w-screen h-screen bg-theme-ModalBG z-50 flex items-center justify-center"
+            className="fixed left-0 top-0 w-screen h-screen bg-theme-ModalBG z-50 flex items-center justify-center cursor-pointer"
           >
             <div className="relative w-[60%] h-[60%]">
               <Image
