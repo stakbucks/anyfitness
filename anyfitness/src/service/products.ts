@@ -8,10 +8,7 @@ const projection = `
 
 export async function getProductsByCategory(type: string, category: string) {
   const data = await client.fetch(
-    `*[_type == "${type}" && Category == "${category}"]{${projection}}`,
-    {
-      cache:'no-store'
-    }
+    `*[_type == "${type}" && Category == "${category}"]{${projection}}`
   );
   return convertProducts(data);
 }

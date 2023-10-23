@@ -22,7 +22,7 @@ export default function FacilityItem({ facility }: Props) {
         onClick={handleClick}
         key={id}
         layout
-        className="xl:min-w-[258px] xl:h-[207px] min-w-[243px] h-[193px] flex flex-col gap-[8px]"
+        className="xl:min-w-[258px] xl:h-[207px] min-w-[243px] h-[193px] flex flex-col gap-[8px] cursor-pointer"
       >
         <Image
           alt="인증서"
@@ -40,7 +40,7 @@ export default function FacilityItem({ facility }: Props) {
         <ModalPortal>
           <div
             onClick={handleModalClick}
-            className="fixed left-0 top-0 w-screen h-screen bg-theme-ModalBG z-50 flex items-center justify-center cursor-pointer"
+            className="fixed left-0 top-0 w-screen h-screen bg-theme-ModalBG z-50 flex items-center justify-center"
           >
             <div className="relative w-[60%] h-[60%]">
               <Image

@@ -1,14 +1,11 @@
 import SectionTitle from '../SectionTitle/SectionTitle';
-
 import { ICertificate } from '@/interface/certificate';
-import { BASE_URL } from '../Facilities/Facilities';
 import CarouselLayout from '@/components/Carousel/CarouselLayout';
 import CertificatesContainer from './CertificatesContainer/CertificatesContainer';
+import { getCertificates } from '@/service/certificates';
 
 export default async function Certificates() {
-  const certificates: ICertificate[] = await fetch(
-    `${BASE_URL}/api/certificates`
-  ).then((res) => res.json());
+  const certificates: ICertificate[] = await getCertificates();
 
   return (
     <section className=" xl:mt-[80px] xl:my-[80px] my-[40px] xl:w-auto w-screen xl:px-0  h-auto ">

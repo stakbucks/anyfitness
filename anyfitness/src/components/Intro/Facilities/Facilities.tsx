@@ -1,13 +1,13 @@
 import CarouselLayout from '@/components/Carousel/CarouselLayout';
 import SectionTitle from '../SectionTitle/SectionTitle';
 import FacilitiesContainer from './FacilitiesContainer/FacilitiesContainer';
+import { getFacilities } from '@/service/facilities';
+import { IFacility } from '@/interface/facility';
 
 export const BASE_URL = 'https://anyfitness.vercel.app/';
 
 export default async function Facilities() {
-  const facilities = await fetch(`${BASE_URL}/api/facilities`).then((res) =>
-    res.json()
-  );
+  const facilities: IFacility[] = await getFacilities();
   return (
     <section className="w-screen h-auto bg-theme-G1 flex justify-center items-center">
       <section className="xl:mt-[80px] xl:my-[80px] my-[40px] xl:w-[900px] w-screen   ">
