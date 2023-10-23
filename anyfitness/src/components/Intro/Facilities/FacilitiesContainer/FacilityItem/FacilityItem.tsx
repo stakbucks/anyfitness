@@ -1,6 +1,5 @@
 'use client';
 import ModalPortal from '@/components/ModalPortal/ModalPortal';
-import { ICertificate } from '@/interface/certificate';
 import { IFacility } from '@/interface/facility';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
@@ -16,6 +15,7 @@ export default function FacilityItem({ facility }: Props) {
   const [modalOpen, setModalOpen] = useState(false);
 
   const handleClick = () => setModalOpen(true);
+  const handleModalClick = () => setModalOpen(false);
   return (
     <>
       <motion.div
@@ -39,11 +39,16 @@ export default function FacilityItem({ facility }: Props) {
       {modalOpen && (
         <ModalPortal>
           <div
-            onClick={() => setModalOpen(false)}
+            onClick={handleModalClick}
             className="fixed left-0 top-0 w-screen h-screen bg-theme-ModalBG z-50 flex items-center justify-center"
           >
             <div className="relative w-[60%] h-[60%]">
-              <Image alt="확대 이미지" src={image} fill />
+              <Image
+                alt="확대 이미지"
+                src={image}
+                fill
+                className="object-contain"
+              />
             </div>
           </div>
         </ModalPortal>
