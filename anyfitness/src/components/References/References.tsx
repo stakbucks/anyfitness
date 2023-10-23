@@ -1,17 +1,7 @@
 import { ISimpleReference, ReferenceTypes } from '@/interface/references';
 import ReferenceItem from './RefrenceItem.tsx/ReferenceItem';
 import { getReferencesByType } from '@/service/references';
-
-function convertTypeToKor(type: ReferenceTypes) {
-  switch (type) {
-    case ReferenceTypes.WEIGHT:
-      return '웨이트';
-    case ReferenceTypes.OUTDOOR:
-      return '야외기구';
-    case ReferenceTypes.EXHIBITION:
-      return '전시회';
-  }
-}
+import { convertReferenceTypeToKor } from '@/utils/convertReferenceTypeToKor';
 
 type Props = {
   type: ReferenceTypes;
@@ -24,7 +14,7 @@ const dynamicSizes = {
 
 export default async function References({ type }: Props) {
   const references: ISimpleReference[] = await getReferencesByType(
-    convertTypeToKor(type)
+    convertReferenceTypeToKor(type)
   );
 
   return (
