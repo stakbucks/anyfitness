@@ -15,10 +15,7 @@ specification{
 export async function getProductById(id: string) {
   const data = await client.fetch(
     `*[_id == "${id}"]{${projection}}`,
-    undefined,
-    {
-      cache: 'no-cache',
-    }
+    undefined
   );
   return convertProduct(data[0]);
 }

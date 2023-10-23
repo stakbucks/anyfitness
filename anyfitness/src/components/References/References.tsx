@@ -1,7 +1,17 @@
 import { ISimpleReference, ReferenceTypes } from '@/interface/references';
 import ReferenceItem from './RefrenceItem.tsx/ReferenceItem';
+import { getReferencesByType } from '@/service/references';
 
-const SERVER_URI = 'https://anyfitness.vercel.app/api';
+function convertTypeToKor(type: ReferenceTypes) {
+  switch (type) {
+    case ReferenceTypes.WEIGHT:
+      return '웨이트';
+    case ReferenceTypes.OUTDOOR:
+      return '야외기구';
+    case ReferenceTypes.EXHIBITION:
+      return '전시회';
+  }
+}
 
 type Props = {
   type: ReferenceTypes;
@@ -13,12 +23,9 @@ const dynamicSizes = {
 };
 
 export default async function References({ type }: Props) {
-  const references: ISimpleReference[] = await fetch(
-    `${SERVER_URI}/references/${type}`,
-    {
-      cache: 'no-store',
-    }
-  ).then((res) => res.json());
+  const references: ISimpleReference[] = await getReferencesByType(
+    convertTypeToKor(type)
+  );
 
   return (
     <ul

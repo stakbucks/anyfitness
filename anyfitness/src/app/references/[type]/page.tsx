@@ -10,6 +10,13 @@ type Props = {
   };
 };
 
+export async function generateStaticParams() {
+  const types = ['weight', 'outdoor', 'exhibition'];
+  return types.map((type) => {
+    type;
+  });
+}
+
 export default function ReferencesPage({ params: { type } }: Props) {
   return (
     <div className="w-screen h-auto lg:pt-[85px] pt-[60px] flex flex-col items-center justify-center">

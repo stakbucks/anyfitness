@@ -1,4 +1,4 @@
-import { IDetailReference } from '@/interface/references';
+import { IDetailReference, ISimpleReference } from '@/interface/references';
 import { client, urlFor } from './sanity';
 
 const projection = `
@@ -9,12 +9,9 @@ const projection = `
 export async function getReferencesByType(type: string) {
   const data = await client.fetch(
     `*[_type == "references" && type == "${type}"]{${projection}}`,
-    undefined,
-    {
-      cache: 'no-store',
-    }
+    undefined
   );
-  return convertReferences(data);
+  return convertReferences(data) as ISimpleReference[];
 }
 
 const convertTypeToENG = (type: string) => {
@@ -41,10 +38,7 @@ function convertReferences(references: IDetailReference[]) {
 export async function getReferenceById(id: string) {
   const data = await client.fetch(
     `*[_id == "${id}"][0]{${projection}}`,
-    undefined,
-    {
-      cache: 'no-store',
-    }
+    undefined
   );
   return convertReference(data);
 }
