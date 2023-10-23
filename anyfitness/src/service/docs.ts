@@ -8,7 +8,13 @@ const projection = `
 `;
 
 export async function getDocuments() {
-  const data = await client.fetch(`*[_type == "docs"]{${projection}}`);
+  const data = await client.fetch(
+    `*[_type == "docs"]{${projection}}`,
+    undefined,
+    {
+      cache: 'no-store',
+    }
+  );
   return convertDocs(data);
 }
 

@@ -4,6 +4,7 @@ import ListedSpec from '@/components/Product/ListedSpec/ListedSpec';
 import ProductImage from '@/components/Product/ProductImage/ProductImage';
 import Specification from '@/components/Product/Specification/Specification';
 import { IDetailProduct } from '@/interface/product';
+import { getProductById } from '@/service/product';
 import { convertProductTypeToPath } from '@/utils/matchPath';
 
 type Props = {
@@ -12,17 +13,10 @@ type Props = {
   };
 };
 
-const SERVER_URI = 'https://anyfitness.vercel.app';
-
 export default async function ProductPage({ params: { id } }: Props) {
   // 제품 상세 정보 불러오고
   // 해당 제품의 카테고리(분류)를 통해 Path를 정한다
-  const product: IDetailProduct = await fetch(
-    `${SERVER_URI}/api/product/${id}`,
-    {
-      cache: 'no-store',
-    }
-  ).then((res) => res.json());
+  const product: IDetailProduct = await getProductById(id);
   const { name, type, Category, image, specification } = product;
 
   return (

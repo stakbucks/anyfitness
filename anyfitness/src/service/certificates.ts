@@ -7,7 +7,13 @@ const projection = `
 `;
 
 export async function getCertificates() {
-  const data = await client.fetch(`*[_type == "certificates"]{${projection}}`);
+  const data = await client.fetch(
+    `*[_type == "certificates"]{${projection}}`,
+    undefined,
+    {
+      cache: 'no-store',
+    }
+  );
   return convertCertificate(data);
 }
 function convertCertificate(certificates: ICertificate[]) {

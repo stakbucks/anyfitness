@@ -13,12 +13,14 @@ specification{
 `;
 
 export async function getProductById(id: string) {
-  try {
-    const data = await client.fetch(`*[_id == "${id}"]{${projection}}`);
-    return convertProduct(data[0]);
-  } catch (err) {
-    console.log(err);
-  }
+  const data = await client.fetch(
+    `*[_id == "${id}"]{${projection}}`,
+    undefined,
+    {
+      cache: 'no-cache',
+    }
+  );
+  return convertProduct(data[0]);
 }
 function convertProduct(product: any) {
   return {

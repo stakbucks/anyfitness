@@ -8,7 +8,11 @@ const projection = `
 
 export async function getReferencesByType(type: string) {
   const data = await client.fetch(
-    `*[_type == "references" && type == "${type}"]{${projection}}`
+    `*[_type == "references" && type == "${type}"]{${projection}}`,
+    undefined,
+    {
+      cache: 'no-store',
+    }
   );
   return convertReferences(data);
 }
@@ -35,7 +39,13 @@ function convertReferences(references: IDetailReference[]) {
 }
 
 export async function getReferenceById(id: string) {
-  const data = await client.fetch(`*[_id == "${id}"][0]{${projection}}`);
+  const data = await client.fetch(
+    `*[_id == "${id}"][0]{${projection}}`,
+    undefined,
+    {
+      cache: 'no-store',
+    }
+  );
   return convertReference(data);
 }
 
