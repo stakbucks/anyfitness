@@ -1,8 +1,6 @@
 import Footer from '@/components/Footer/Footer';
 import LandingBanner from '../../../public/landing/landingBanner.png';
 import Image from 'next/image';
-import Doc from '@/components/Docs/Doc/Doc';
-import { IDocs, IDoc, DocTypes } from '@/interface/doc';
 import Docs from '@/components/Docs/Docs';
 
 export default function DocsPage() {

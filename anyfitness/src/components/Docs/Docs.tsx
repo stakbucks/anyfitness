@@ -1,14 +1,10 @@
 import { DocTypes, IDoc, IDocs } from '@/interface/doc';
 import Doc from './Doc/Doc';
-
-const SERVER_URI = 'https://anyfitness.vercel.app/api';
+import { getDocuments } from '@/service/docs';
 
 export default async function Docs() {
-  const { catalog, guide }: IDocs = await fetch(`${SERVER_URI}/documents`, {
-    cache: 'no-cache',
-  })
-    .then((res) => res.json())
-    .then((data: IDoc[]) => {
+  const { catalog, guide }: IDocs = await getDocuments().then(
+    (data: IDoc[]) => {
       const result: IDocs = { catalog: [], guide: [] };
       data.forEach((doc: IDoc) => {
         doc.type === DocTypes.CATALOG
@@ -16,7 +12,8 @@ export default async function Docs() {
           : result.guide.push(doc);
       });
       return result;
-    });
+    }
+  );
 
   return (
     <section className="text-theme-B sp:w-[1424px] xl:w-[928px] w-screen xl:px-0 px-[24px] mb-[80px]">
