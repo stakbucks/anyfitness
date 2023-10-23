@@ -10,7 +10,8 @@ const projection = `
 export async function getDocuments() {
   const data = await client.fetch(
     `*[_type == "docs"]{${projection}}`,
-    undefined
+    {},
+    { cache: 'force-cache' }
   );
   return convertDocs(data);
 }

@@ -9,7 +9,8 @@ const projection = `
 export async function getReferencesByType(type: string) {
   const data = await client.fetch(
     `*[_type == "references" && type == "${type}"]{${projection}}`,
-    undefined
+    {},
+    { cache: 'force-cache' }
   );
   return convertReferences(data) as ISimpleReference[];
 }
@@ -38,7 +39,8 @@ function convertReferences(references: IDetailReference[]) {
 export async function getReferenceById(id: string) {
   const data = await client.fetch(
     `*[_id == "${id}"][0]{${projection}}`,
-    undefined
+    {},
+    { cache: 'force-cache' }
   );
   return convertReference(data);
 }

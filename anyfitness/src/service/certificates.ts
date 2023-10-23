@@ -9,7 +9,8 @@ const projection = `
 export async function getCertificates() {
   const data = await client.fetch(
     `*[_type == "certificates"]{${projection}}`,
-    undefined
+    {},
+    { cache: 'force-cache' }
   );
   return convertCertificate(data);
 }

@@ -1,4 +1,5 @@
 import { ISimpleReference, ReferenceTypes } from '@/interface/references';
+import { getReferencesByType } from '@/service/references';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -7,17 +8,10 @@ type Props = {
   type: ReferenceTypes;
 };
 
-const SERVER_URI = 'https://anyfitness.vercel.app/api';
-
 export default async function SeeMore({ id, type }: Props) {
-  const references: ISimpleReference[] = await fetch(
-    `${SERVER_URI}/references/${type}`,
-    {
-      cache: 'no-store',
-    }
-  )
-    .then((res) => res.json())
-    .then((references: ISimpleReference[]) => {
+  const references: ISimpleReference[] = await getReferencesByType(type).then(
+    (references: ISimpleReference[]) => {
+      console.log(references);
       const currentIdx = references.findIndex(
         (reference: ISimpleReference) => reference.id === id
       )!;
@@ -39,7 +33,8 @@ export default async function SeeMore({ id, type }: Props) {
       // 다음글이 없는 경우
       if (currentIdx === lastIdx) return references.slice(-4, -1);
       return [];
-    });
+    }
+  );
   return (
     <section className="bg-theme-G1 w-screen  h-auto flex justify-center">
       <div className="h-auto sp:w-[1424px] xl:w-[928px] w-screen py-[40px]  flex flex-col ">

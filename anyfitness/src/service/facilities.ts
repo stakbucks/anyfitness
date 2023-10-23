@@ -9,7 +9,8 @@ const projection = `
 export async function getFacilities() {
   const data = await client.fetch(
     `*[_type == "facilities"]{${projection}}`,
-    undefined
+    {},
+    { cache: 'force-cache' }
   );
   return convertFacilities(data);
 }

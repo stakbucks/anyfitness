@@ -3,7 +3,7 @@ import Paths from '@/components/Paths/Paths';
 import Reference from '@/components/Reference/Reference';
 import SeeMore from '@/components/Reference/SeeMore/SeeMore';
 import { IDetailReference, ReferenceTypes } from '@/interface/references';
-import { convertProductTypeToPath } from '@/utils/matchPath';
+import { getReferenceById } from '@/service/references';
 
 type Props = {
   params: {
@@ -11,16 +11,9 @@ type Props = {
   };
 };
 
-const SERVER_URI = 'https://anyfitness.vercel.app/api';
-
 export default async function ReferencesPage({ params: { slug } }: Props) {
   const [type, id] = slug;
-  const reference: IDetailReference = await fetch(
-    `${SERVER_URI}/reference/${id}`,
-    {
-      cache: 'no-store',
-    }
-  ).then((res) => res.json());
+  const reference: IDetailReference = await getReferenceById(id);
   return (
     <>
       <Paths />
