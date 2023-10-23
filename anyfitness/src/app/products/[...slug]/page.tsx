@@ -33,23 +33,23 @@ export default async function WeightPage({ params: { slug } }: Props) {
   );
 }
 
-export async function generateStaticParams() {
-  const weightSlugs: ['weight', IWeightCategories][] = [
-    ['weight', 'bts'],
-    ['weight', 'diamond'],
-    ['weight', 'free'],
-    ['weight', 'aseries'],
-  ];
-  const cardioSlugs: ['cardio', ICardioCategories][] = [
-    ['cardio', 'home'],
-    ['cardio', 'club'],
-    ['cardio', 'cycle'],
-  ];
-  const outdoorSlugs: ['outdoor', IOutdoorCategories][] = [
-    ['outdoor', '400'],
-    ['outdoor', '300'],
-    ['outdoor', '200'],
-    ['outdoor', '600'],
-  ];
-  return [...weightSlugs, ...cardioSlugs, ...outdoorSlugs];
-}
+// export async function generateStaticParams() {
+//   const weightSlugs: ['weight', IWeightCategories][] = [
+//     ['weight', 'bts'],
+//     ['weight', 'diamond'],
+//     ['weight', 'free'],
+//     ['weight', 'aseries'],
+//   ];
+//   const cardioSlugs: ['cardio', ICardioCategories][] = [
+//     ['cardio', 'home'],
+//     ['cardio', 'club'],
+//     ['cardio', 'cycle'],
+//   ];
+//   const outdoorSlugs: ['outdoor', IOutdoorCategories][] = [
+//     ['outdoor', '400'],
+//     ['outdoor', '300'],
+//     ['outdoor', '200'],
+//     ['outdoor', '600'],
+//   ];
+//   return [...weightSlugs, ...cardioSlugs, ...outdoorSlugs];
+// }
