@@ -7,14 +7,13 @@ const projection = `
 `;
 
 export async function getProductsByCategory(type: string, category: string) {
-  try {
-    const data = await client.fetch(
-      `*[_type == "${type}" && Category == "${category}"]{${projection}}`
-    );
-    return convertProducts(data);
-  } catch (err) {
-    console.log(err);
-  }
+  const data = await client.fetch(
+    `*[_type == "${type}" && Category == "${category}"]{${projection}}`,
+    {
+      cache:'no-store'
+    }
+  );
+  return convertProducts(data);
 }
 function convertProducts(products: ISimpleWeight[]) {
   return products.map(({ id, name, image }: ISimpleWeight) => ({
