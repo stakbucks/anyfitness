@@ -30,6 +30,6 @@ export const brands: IBrand[] = [
     description:
       '의자이동이 가능하여 휠체어에 탑승한 채 사용 가능합니다. 시각장애인을 위한 점자 블럭이 표시됩니다.',
     img: ASERIES,
-    link: '/products/weight/disabled',
+    link: '/products/weight/aseries',
   },
 ];
