@@ -14,14 +14,14 @@ export const brands: IBrand[] = [
   {
     name: 'BTS',
     description:
-      '클럽용 최고급 웨이트 헬스기구로 내구성이 우수하고 디자인이 수려합니다. 각으로 이루어진 부드럽고 아름다운 다지인이 완성되었습니다.',
+      '클럽용 최고급 웨이트 헬스기구로 내구성이 우수하고 디자인이 수려합니다. 각으로 이루어진 부드럽고 아름다운 디자인이 완성되었습니다.',
     img: BTS,
     link: '/products/weight/bts',
   },
   {
     name: 'DIAMOND',
     description:
-      '한국인의 체형에 적합한 인체공학적 설계로 관절에 무리가 없고 적잘한 부하가 걸리도록 설계되었습니다.',
+      '한국인의 체형에 적합한 인체공학적 설계로 관절에 무리가 없고 적절한 부하가 걸리도록 설계되었습니다.',
     img: DIAMOND,
     link: '/products/weight/diamond',
   },
