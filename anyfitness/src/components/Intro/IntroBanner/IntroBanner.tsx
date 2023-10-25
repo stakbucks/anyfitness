@@ -12,9 +12,6 @@ export default function IntroBanner() {
         className="object-cover w-screen h-[300px]"
       />
       <div className="relative sp:w-[1440px] xl:w-[928px] w-screen  h-full flex justify-center items-center">
-        <h2 className="text-theme-W lg:text-KOR-lg-H text-KOR-sm-H0 z-[2]">
-          회사 소개
-        </h2>
         <div className="absolute xl:top-[36px] xl:top-[24px] top-[20px] xl:left-0 left-[24px] flex items-center">
           <span className={`text-theme-G3 lg:text-KOR-lg-H5 text-KOR-sm-C2 `}>
             Home

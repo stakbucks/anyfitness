@@ -23,7 +23,7 @@ export default function BannerText() {
   }, [pathname]);
 
   return (
-    <p className="text-theme-B xl:text-KOR-lg-H text-KOR-sm-H0 xl:mt-[60px] mt-[64px]">
+    <p className="text-theme-B xl:text-KOR-lg-H text-KOR-sm-H0 text-center">
       {text}
     </p>
   );

@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import Paths from '@/components/Paths/Paths';
 import Banner from '../../../public/products/banner.png';
-import GoShoppingBtn from '@/UI/Buttons/GoShoppingBtn';
 import Filter from '@/components/Products/Filter/Filter';
 import BannerText from '@/components/Products/BannerText/BannerText';
 
@@ -15,7 +14,7 @@ export default function ProductsLayout({ children }: Props) {
       <Paths />
 
       {/* 배너 */}
-      <div className="relative sp:w-[1920px] xl:w-[1520px] lg:w-[1024px]  w-screen flex flex-col items-center gap-[20px] xl:h-[240px] h-[195px]">
+      <div className="relative sp:w-[1920px] xl:w-[1520px] lg:w-[1024px]  w-screen flex flex-col items-center justify-center gap-[20px] xl:h-[240px] h-[195px]">
         <Image
           alt="배너"
           src={Banner}
@@ -23,9 +22,8 @@ export default function ProductsLayout({ children }: Props) {
           priority
           className="object-cover w-screen h-[240px]"
         />
-        <div className="absolute top-0 left-0 w-screen flex flex-col items-center gap-[20px]">
+        <div className=" w-screen flex justify-center items-center">
           <BannerText />
-          <GoShoppingBtn text={'쇼핑몰 바로가기'} />
         </div>
       </div>
 

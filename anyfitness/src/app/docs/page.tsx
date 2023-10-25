@@ -15,9 +15,6 @@ export default function DocsPage() {
           className="object-cover w-[100vw] h-full z-0 "
         />
         <div className="relative sp:w-[1440px] xl:w-[928px] w-screen  h-full flex justify-center items-center">
-          <h2 className="text-theme-W lg:text-KOR-lg-H text-KOR-sm-H0 z-[2]">
-            자료실
-          </h2>
           <div className="absolute xl:top-[36px] xl:top-[24px] top-[20px] xl:left-0 left-[24px] flex items-center">
             <span
               className={`text-theme-G3 lg:text-KOR-lg-H5 lg:text-KOR-sm-C2 `}
@@ -26,7 +23,7 @@ export default function DocsPage() {
             </span>
             <div className="lg:w-[1.5px] w-[1px] lg:h-[18px] h-[14px] bg-theme-G3 mx-[12px]" />
             <span className="text-theme-W lg:text-KOR-lg-H4 text-KOR-sm-C4">
-              회사 소개
+              자료실
             </span>
           </div>
         </div>
