@@ -29,13 +29,13 @@ export default function ProductCard({ product }: Props) {
             {name}
           </h3>
         </div>
-        <div className="relative bg-inherit w-full xl:h-[230px] xl:mt-[10px] h-[240px] mt-0">
+        <div className="relative bg-inherit w-full xl:h-full  xl:mt-0  h-[240px] mt-0">
           <Image
             id="image-test"
             alt={name}
             src={image}
             fill
-            className="object-cover"
+            className="xl:object-contain object-cover"
           />
         </div>
       </li>

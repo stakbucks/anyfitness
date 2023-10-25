@@ -6,12 +6,12 @@ type Props = {
 
 export default function ProductImage({ image }: Props) {
   return (
-    <div className="relative sp:w-[994px] sp:min-h-[637px] xl:w-[498px] xl:min-h-[500px] w-full xl:h-auto h-[328px] bg-theme-IMGBG flex justify-center items-center">
+    <div className="relative bg-theme-IMGBG sp:w-[994px] py-auto sp:min-h-[637px] xl:w-[498px] xl:min-h-[500px] w-full xl:h-auto h-[328px] bg-theme-IMGBG flex justify-center items-center">
       <Image
         alt="제품 이미지"
         src={image}
         fill
-        className=" sp:h-auto xl:h-[480px] xl:object-cover object-contain h-[328px]"
+        className=" sp:h-auto xl:h-[480px] xl:object-contain object-contain h-[328px]"
       />
     </div>
   );
