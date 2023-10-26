@@ -7,6 +7,7 @@ export type IFilterItem = {
 };
 export type IProductType = {
   type: string;
+  link: string;
   category: IFilterItem[];
 };
 
@@ -36,6 +37,7 @@ export const productsFilter: IFilterItem[] = [
 export const productTypes: IProductType[] = [
   {
     type: '근력운동기구',
+    link: '/products/weight/bts',
     category: [
       {
         name: 'BTS',
@@ -61,6 +63,7 @@ export const productTypes: IProductType[] = [
   },
   {
     type: '유산소운동기구',
+    link: '/products/cardio/home',
     category: [
       {
         name: '가정용 런닝머신',
@@ -81,6 +84,7 @@ export const productTypes: IProductType[] = [
   },
   {
     type: '야외운동기구',
+    link: '/products/outdoor/400',
     category: [
       {
         name: '400',

@@ -6,14 +6,16 @@ type Props = {
   isLast: boolean;
 };
 export default function ProductType({ productType, isLast }: Props) {
-  const { type: categoryName, category } = productType;
+  const { type: categoryName, category, link } = productType;
   return (
     <div
       className={`w-[148px] h-[160px] flex flex-col gap-[8px] ${
         !isLast && 'border-r border-solid border-theme-G2'
       } `}
     >
-      <h3 className="text-KOR-lg-B3 text-theme-BLUE">{categoryName}</h3>
+      <Link href={link}>
+        <h3 className="text-KOR-lg-B3 text-theme-BLUE">{categoryName}</h3>
+      </Link>
       {category.map(({ name, link }, idx) => (
         <Link
           href={link}
