@@ -38,12 +38,12 @@ export const productTypes: IProductType[] = [
     type: '근력운동기구',
     category: [
       {
-        name: 'BTS시리즈',
+        name: 'BTS',
         shortName: 'BTS',
         link: '/products/weight/bts',
       },
       {
-        name: 'DIAMOND시리즈',
+        name: 'DIAMOND',
         shortName: 'DIAMOND',
         link: '/products/weight/diamond',
       },
@@ -53,7 +53,7 @@ export const productTypes: IProductType[] = [
         link: '/products/weight/free',
       },
       {
-        name: '장애인용 A시리즈',
+        name: '장애인용 A',
         shortName: '장애인용 A',
         link: '/products/weight/aseries',
       },
@@ -83,22 +83,22 @@ export const productTypes: IProductType[] = [
     type: '야외운동기구',
     category: [
       {
-        name: '400 series',
+        name: '400',
         shortName: '400',
         link: '/products/outdoor/400',
       },
       {
-        name: '300 series',
+        name: '300',
         shortName: '300',
         link: '/products/outdoor/300',
       },
       {
-        name: '200 series',
+        name: '200',
         shortName: '200',
         link: '/products/outdoor/200',
       },
       {
-        name: '600 series',
+        name: '600',
         shortName: '600',
         link: '/products/outdoor/600',
       },
