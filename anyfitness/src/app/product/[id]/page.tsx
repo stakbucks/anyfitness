@@ -5,6 +5,7 @@ import ProductImage from '@/components/Product/ProductImage/ProductImage';
 import Specification from '@/components/Product/Specification/Specification';
 import { IDetailProduct } from '@/interface/product';
 import { getProductById } from '@/service/product';
+import { getAllProductsId } from '@/service/products';
 import { convertProductTypeToPath } from '@/utils/matchPath';
 
 type Props = {
@@ -18,6 +19,8 @@ export default async function ProductPage({ params: { id } }: Props) {
   // 해당 제품의 카테고리(분류)를 통해 Path를 정한다
   const product: IDetailProduct = await getProductById(id);
   const { name, type, Category, image, specification } = product;
+  const ids: IDetailProduct = await getAllProductsId();
+  console.log(ids);
 
   return (
     <>
@@ -38,4 +41,9 @@ export default async function ProductPage({ params: { id } }: Props) {
       </div>
     </>
   );
+}
+
+export async function generateStaticParams() {
+  const ids: IDetailProduct = await getAllProductsId();
+  return ids;
 }

@@ -20,7 +20,10 @@ export default function DetailListedSpec({ spec, name }: Props) {
             {spec.map((v, i) => (
               <>
                 {isDisabledFeature(v) ? (
-                  <li className="text-theme-B xl:text-KOR-lg-H2 text-KOR-sm-H2">
+                  <li
+                    key={i}
+                    className="text-theme-B xl:text-KOR-lg-H2 text-KOR-sm-H2"
+                  >
                     · {v.replaceAll('-', '')}
                   </li>
                 ) : (
