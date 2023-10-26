@@ -1,6 +1,5 @@
 import SectionTitle from '../SectionTitle/SectionTitle';
 import { ICertificate } from '@/interface/certificate';
-import CarouselLayout from '@/components/Carousel/CarouselLayout';
 import CertificatesContainer from './CertificatesContainer/CertificatesContainer';
 import { getCertificates } from '@/service/certificates';
 
@@ -8,8 +7,8 @@ export default async function Certificates() {
   const certificates: ICertificate[] = await getCertificates();
 
   return (
-    <section className=" xl:mt-[80px] xl:my-[80px] my-[40px] xl:w-auto w-screen xl:px-0  h-auto ">
-      <div className="xl:px-[50px] flex xl:flex-row flex-col xl:justify-between xl:gap-0 gap-[16px] xl:mb-[60px] mb-[20px] xl:px-0 px-[24px]">
+    <section className=" xl:mt-[80px] xl:my-[80px] my-[40px] xl:w-[800px] w-screen xl:px-0  h-auto ">
+      <div className=" flex xl:flex-row flex-col xl:justify-between xl:gap-0 gap-[16px] xl:mb-[60px] mb-[20px] xl:px-0 px-[24px]">
         <SectionTitle KorTitle="인증현황" EngTitle="Certificate and Patent" />
         <p className="xl:w-[560px] w-auto text-theme-G6 xl:text-KOR-lg-B2 text-KOR-sm-C1">
           애니휘트니스의 기술력은 수상실적과 각종 인증으로 증명합니다.
@@ -20,9 +19,7 @@ export default async function Certificates() {
         </p>
       </div>
 
-      <CarouselLayout length={certificates.length} cols={4}>
-        <CertificatesContainer certificates={certificates} />
-      </CarouselLayout>
+      <CertificatesContainer certificates={certificates} />
     </section>
   );
 }
