@@ -20,7 +20,6 @@ export default async function ProductPage({ params: { id } }: Props) {
   const product: IDetailProduct = await getProductById(id);
   const { name, type, Category, image, specification } = product;
   const ids: IDetailProduct = await getAllProductsId();
-  console.log(ids);
 
   return (
     <>
@@ -45,5 +44,5 @@ export default async function ProductPage({ params: { id } }: Props) {
 
 export async function generateStaticParams() {
   const ids: string[] = await getAllProductsId();
-  return ids;
+  return ids.map((id) => ({ id }));
 }
