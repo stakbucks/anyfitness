@@ -29,12 +29,7 @@ export const metadata: Metadata = {
   },
 };
 
-export async function generateStaticParams() {
-  const types = ['weight', 'outdoor', 'exhibition'];
-  return types.map((type) => {
-    type;
-  });
-}
+
 
 export default function ReferencesPage({ params: { type } }: Props) {
   return (

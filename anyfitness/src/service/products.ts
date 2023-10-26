@@ -12,6 +12,7 @@ export async function getProductsByCategory(type: string, category: string) {
     {},
     { cache: 'force-cache' }
   );
+
   return convertProducts(data);
 }
 function convertProducts(products: ISimpleWeight[]) {

@@ -1,5 +1,4 @@
 import { client, urlFor } from './sanity';
-import { IDetailProduct, ISimpleProduct } from '@/interface/product';
 
 const projection = `
 ..., 

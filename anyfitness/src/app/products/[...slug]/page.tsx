@@ -73,5 +73,7 @@ export async function generateStaticParams() {
     ['outdoor', '200'],
     ['outdoor', '600'],
   ];
-  return [...weightSlugs, ...cardioSlugs, ...outdoorSlugs];
+  return [...weightSlugs, ...cardioSlugs, ...outdoorSlugs].map((v) => ({
+    slug: v,
+  }));
 }
