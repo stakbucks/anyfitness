@@ -3,11 +3,30 @@ import Banner from '../../../../public/references/referencesBanner.png';
 import Image from 'next/image';
 import { ReferenceTypes } from '@/interface/references';
 import Filter from '@/components/References/Filter/Filter';
+import { Metadata } from 'next';
 
 type Props = {
   params: {
     type: ReferenceTypes;
   };
+};
+
+export const metadata: Metadata = {
+  title: '애니휘트니스 | 납품사례',
+  description: '애니휘트니스 | 납품사례',
+  openGraph: {
+    title:'애니휘트니스 | 납품사례',
+    description: '애니휘트니스 | 납품사례',
+    url: 'https://anyfitness.co.kr/references',
+    siteName: `Anyfitness`,
+    images: [
+      {
+        url: '/logo.png',
+        width: 800,
+        height: 600,
+      },
+    ],
+  },
 };
 
 export async function generateStaticParams() {

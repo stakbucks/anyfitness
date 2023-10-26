@@ -5,10 +5,10 @@ import Docs from '@/components/Docs/Docs';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Anyfitness | 애니휘트니스',
+  title: '애니휘트니스 | 자료실',
   description: '애니휘트니스 | 자료실',
   openGraph: {
-    title: 'Anyfitness | 애니휘트니스',
+    title:'애니휘트니스 | 자료실',
     description: '애니휘트니스 | 자료실',
     url: 'https://anyfitness.co.kr/docs',
     siteName: `Anyfitness`,

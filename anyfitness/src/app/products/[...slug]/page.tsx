@@ -17,12 +17,12 @@ export async function generateMetadata({ params }: Props) {
   const [type, category] = params.slug;
 
   return {
-    title: `${type} | ${category}`,
-    description: ` 제품소개 | ${category}`,
+    title: `${type.toUpperCase()} | ${category.toUpperCase()}`,
+    description: ` 제품소개 | ${category.toUpperCase()}`,
     openGraph: {
-      title: `${type} | ${category}`,
-      description: ` 제품소개 | ${category}`,
-      url: 'https://anyfitness.co.kr/docs',
+      title: `${type.toUpperCase()} | ${category.toUpperCase()}`,
+      description: ` 제품소개 | ${category.toUpperCase()}`,
+      url: 'https://anyfitness.co.kr/weight/bts',
       siteName: `Anyfitness`,
       images: [
         {

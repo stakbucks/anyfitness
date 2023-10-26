@@ -7,12 +7,12 @@ import Footer from '@/components/Footer/Footer';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Anyfitness | 애니휘트니스',
+  title: '애니휘트니스 | 회사소개',
   description: '애니휘트니스 | 회사소개',
   openGraph: {
-    title: 'Anyfitness | 애니휘트니스',
+    title: '애니휘트니스 | 회사소개',
     description: '애니휘트니스 | 회사소개',
-    url: 'https://anyfitness.co.kr/docs',
+    url: 'https://anyfitness.co.kr/intro',
     siteName: `Anyfitness`,
     images: [
       {
