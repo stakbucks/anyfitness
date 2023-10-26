@@ -2,6 +2,25 @@ import Footer from '@/components/Footer/Footer';
 import LandingBanner from '../../../public/landing/landingBanner.png';
 import Image from 'next/image';
 import Docs from '@/components/Docs/Docs';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Anyfitness | 애니휘트니스',
+  description: '애니휘트니스 | 자료실',
+  openGraph: {
+    title: 'Anyfitness | 애니휘트니스',
+    description: '애니휘트니스 | 자료실',
+    url: 'https://anyfitness.co.kr/docs',
+    siteName: `Anyfitness`,
+    images: [
+      {
+        url: '/logo.png',
+        width: 800,
+        height: 600,
+      },
+    ],
+  },
+};
 
 export default function DocsPage() {
   return (

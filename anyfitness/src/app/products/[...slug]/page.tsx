@@ -13,6 +13,28 @@ type Props = {
   };
 };
 
+export async function generateMetadata({ params }: Props) {
+  const [type, category] = params.slug;
+
+  return {
+    title: `${type} | ${category}`,
+    description: ` 제품소개 | ${category}`,
+    openGraph: {
+      title: `${type} | ${category}`,
+      description: ` 제품소개 | ${category}`,
+      url: 'https://anyfitness.co.kr/docs',
+      siteName: `Anyfitness`,
+      images: [
+        {
+          url: '/logo.png',
+          width: 800,
+          height: 600,
+        },
+      ],
+    },
+  };
+}
+
 const convertType = (type: string) => {
   if (type === 'weight') return 'weightEq';
   else return type;
