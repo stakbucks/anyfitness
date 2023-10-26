@@ -1,12 +1,6 @@
 import NavigationBar from '@/components/NavigationBar/NavigationBar';
 import './globals.css';
-import type { Metadata } from 'next';
 import localFont from 'next/font/local';
-
-export const metadata: Metadata = {
-  title: 'Anyfitness | 애니휘트니스',
-  description: '애니휘트니스 : Your health starts here',
-};
 
 const pretendard = localFont({
   src: './PretendardVariable.woff2',
