@@ -44,6 +44,6 @@ export default async function ProductPage({ params: { id } }: Props) {
 }
 
 export async function generateStaticParams() {
-  const ids: IDetailProduct = await getAllProductsId();
+  const ids: string[] = await getAllProductsId();
   return ids;
 }
