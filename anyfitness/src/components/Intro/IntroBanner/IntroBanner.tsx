@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import Banner from '../../../../public/intro/introBanner.png';
+import Banner from '../../../../public/intro/introBanner2.png';
 
 export default function IntroBanner() {
   return (
@@ -11,7 +11,7 @@ export default function IntroBanner() {
         priority
         className="object-cover w-screen h-[300px]"
       />
-      <div className="relative sp:w-[1440px] xl:w-[928px] w-screen  h-full flex justify-center items-center">
+      {/* <div className="relative sp:w-[1440px] xl:w-[928px] w-screen  h-full flex justify-center items-center">
         <div className="absolute xl:top-[36px] xl:top-[24px] top-[20px] xl:left-0 left-[24px] flex items-center">
           <span className={`text-theme-G3 lg:text-KOR-lg-H5 text-KOR-sm-C2 `}>
             Home
@@ -21,7 +21,7 @@ export default function IntroBanner() {
             회사 소개
           </span>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }
