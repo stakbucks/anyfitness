@@ -21,8 +21,8 @@ export const productsFilter: IProductFilterItem[] = [
     link: '/products/weight/free',
   },
   {
-    name: '장애인용 A시리즈',
-    shortName: '장애인용 A',
+    name: '장애인용',
+    shortName: '장애인용',
     link: '/products/weight/aseries',
   },
 ];

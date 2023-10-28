@@ -28,8 +28,8 @@ export const productsFilter: IFilterItem[] = [
     link: '/products/weight/free',
   },
   {
-    name: '장애인용 A시리즈',
-    shortName: '장애인용 A',
+    name: '장애인용',
+    shortName: '장애인용',
     link: '/products/weight/aseries',
   },
 ];
@@ -55,8 +55,8 @@ export const productTypes: IProductType[] = [
         link: '/products/weight/free',
       },
       {
-        name: '장애인용 A',
-        shortName: '장애인용 A',
+        name: '장애인용',
+        shortName: '장애인용',
         link: '/products/weight/aseries',
       },
     ],
