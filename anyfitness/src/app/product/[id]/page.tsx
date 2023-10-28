@@ -14,12 +14,33 @@ type Props = {
   };
 };
 
+export async function generateMetadata({ params }: Props) {
+  const product: IDetailProduct = await getProductById(params.id);
+  const { name, Category, image } = product;
+
+  return {
+    title: `${Category} | ${name}`,
+    description: `${Category} | ${name}`,
+    openGraph: {
+      title: `${Category} | ${name}`,
+      description: `${Category} | ${name}`,
+      siteName: `Anyfitness`,
+      images: [
+        {
+          url: image,
+          width: 800,
+          height: 600,
+        },
+      ],
+    },
+  };
+}
+
 export default async function ProductPage({ params: { id } }: Props) {
   // 제품 상세 정보 불러오고
   // 해당 제품의 카테고리(분류)를 통해 Path를 정한다
   const product: IDetailProduct = await getProductById(id);
   const { name, type, Category, image, specification } = product;
-  const ids: IDetailProduct = await getAllProductsId();
 
   return (
     <>
