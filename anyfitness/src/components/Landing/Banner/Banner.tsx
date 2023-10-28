@@ -5,7 +5,7 @@ import DiscoverWhiteBtn from '@/UI/Buttons/DiscoverWhiteBtn';
 
 export default function Banner() {
   return (
-    <div className="xl:w-[1920px] lg:w-[1024px] md:w-[768px] w-[390px] lg:h-[300px] h-[240px] relative flex flex-col  justify-center items-center">
+    <div className="xl:w-[1920px] lg:w-[1024px] md:w-[768px] w-[390px] lg:h-[calc(100vh-85px)] h-[240px] relative flex flex-col  justify-center items-center">
       <Image
         alt="배너"
         src={LandingBanner}
